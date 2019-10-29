@@ -24,16 +24,16 @@
           <div class="container">
             <div class="div px-4">
               {{-- title --}}
-              <div class="form-group row">
-                <label for="name" class="col-sm-3 col-form-label">Title :</label>
-                <div class="col-sm-7">
+              <div class="form-group">
+                <label for="name" class="col">Title :</label>
+                <div class="col-12">
                   <input type="text" readonly class="form-control-plaintext" id="name" value="title">
                 </div>
               </div>
               {{-- description --}}
-              <div class="form-group row">
-                <label for="description" class="col-sm-3 col-form-label">Description :</label>
-                <div class="col-sm-7">
+              <div class="form-group">
+                <label for="description" class="col">Description :</label>
+                <div class="col-12">
                   <input type="text" readonly class="form-control-plaintext" id="description"
                     value="this is a description">
                 </div>

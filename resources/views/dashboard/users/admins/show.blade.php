@@ -27,7 +27,7 @@
                             {{-- name --}}
                             <div class="form-group row">
                                 <label for="name" class="col-sm-3 col-form-label">Full Name :</label>
-                                <div class="col-sm-7">
+                                <div class="col-sm-9">
                                     <input type="text" readonly class="form-control-plaintext" id="name"
                                         value="Mahmoud Mustafa">
                                 </div>
@@ -35,7 +35,7 @@
                             {{-- userName --}}
                             <div class="form-group row">
                                 <label for="username" class="col-sm-3 col-form-label">UserName :</label>
-                                <div class="col-sm-7">
+                                <div class="col-sm-9">
                                     <input type="text" readonly class="form-control-plaintext" id="username"
                                         value="mahmoudmo">
                                 </div>
@@ -43,7 +43,7 @@
                             {{-- email --}}
                             <div class="form-group row">
                                 <label for="email" class="col-sm-3 col-form-label">Email :</label>
-                                <div class="col-sm-7">
+                                <div class="col-sm-9">
                                     <input type="text" readonly class="form-control-plaintext" id="email"
                                         value="mahmoud@gmail.com">
                                 </div>
@@ -51,7 +51,7 @@
                             {{-- number --}}
                             <div class="form-group row">
                                 <label for="phone" class="col-sm-3 col-form-label">Phone :</label>
-                                <div class="col-sm-7">
+                                <div class="col-sm-9">
                                     <input type="text" readonly class="form-control-plaintext" id="phone"
                                         value="01155536247">
                                 </div>
@@ -93,7 +93,7 @@
                             <label class="col">{{ __('Birth Day : ') }} 6 / 6 / 96</label>
                         </div>
                         <div class="div px-2">
-                            <label class="col">{{ __('Joined In : ') }} 6 / 6 / 96</label>
+                            <label class="col">{{ __('Joined at : ') }} 6 / 6 / 96</label>
                         </div>
                     </div>
                 </div>

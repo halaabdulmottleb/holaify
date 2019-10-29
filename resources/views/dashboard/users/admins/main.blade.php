@@ -14,18 +14,20 @@
       </a>
     </div>
   </div>
-  {{-- search --}}
-  <div class="search w-100 p-3">
-    <div class="form-group mb-0">
-      <div class="col-md-4 position-relative">
-        <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
-        <input id="search" type="text" class="form-control search-input" name="search" placeholder="Search for Admins">
-      </div>
-    </div>
-  </div>
   {{-- content --}}
   <div class="main p-3">
     {{-- @forelse ($admins as $admin) --}}
+    {{-- search --}}
+    <div class="search w-100 py-3">
+      <div class="form-group mb-0">
+        <div class="col-md-4 p-0 position-relative">
+          <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
+          <input id="search" type="text" class="form-control search-input" name="search"
+            placeholder="Search for Admins">
+        </div>
+      </div>
+    </div>
+    {{-- table --}}
     <table class="table table-hover">
       <thead>
         <tr>
@@ -46,9 +48,9 @@
       </tbody>
     </table>
     {{-- @empty --}}
-    {{-- <div class="not-yet my-3">
-      <h3 class="p-2 my-3">No Admins Yet</h3>
-      <img src="/img/admins.svg" alt="No-admin" width="350" style="float:right">
+    {{-- <div class="not-yet">
+      <h3 class="my-3">No Admins Yet</h3>
+      <img src="/img/not-found.svg" alt="No-admin" width="380">
     </div> --}}
     {{-- @endforelse --}}
   </div>

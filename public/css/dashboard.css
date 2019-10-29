@@ -174,18 +174,23 @@ body {
 }
 
 .content .main .not-yet {
-    overflow: auto;
-    margin-top: 1rem;
-    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
 }
 
 .content .main .not-yet h3 {
     font-size: 2rem;
-    float: left;
-    padding: .5rem;
-    background: rgb(208, 213, 218);
+    background: rgba(255, 255, 255, 0.57);
     border-radius: 3px;
-    text-shadow: 0 0 2px black;
+    text-shadow: 0 0 12px #20191966;
+    color: #191a22;
+    position: absolute;
+    top: 35%;
+    left: 25px;
+    text-align: center;
+    padding: .6rem 3.5rem !important;
 }
 
 /* table */
@@ -195,7 +200,7 @@ body {
 
 .search label {
     top: 20%;
-    left: 8%;
+    left: 15px;
     margin: 0;
     text-shadow: none;
     color: #626262;
@@ -280,7 +285,20 @@ table {
 }
 
 .del-user {
-    background: linear-gradient(45deg, #d42121, #c30505f0);
+    background: linear-gradient(45deg, #d84242, #aa1f1f);
+}
+.del-user:hover{
+    box-shadow: 0 0 5px #da2d2d;    
+}
+.edit-btn {
+    background: linear-gradient(45deg, #66fc6c, #23cb2a);
+    border: 0;
+    transition: 500ms ease;
+    padding: 8px 15px;
+}
+
+.edit-btn:hover {
+    box-shadow: 0 0 5px #62f968;
 }
 
 label {

@@ -8,18 +8,20 @@
       <h3>Abandoned Checkouts</h3>
     </div>
   </div>
-  {{-- search --}}
-  <div class="search w-100 p-3">
-    <div class="form-group mb-0">
-      <div class="col-md-4 position-relative">
-        <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
-        <input id="search" type="text" class="form-control search-input" name="search" placeholder="Search for Admins">
-      </div>
-    </div>
-  </div>
   {{-- content --}}
   <div class="main p-3">
     {{-- @forelse ($checkouts as $checkout) --}}
+    {{-- search --}}
+    <div class="search w-100 py-3">
+      <div class="form-group mb-0">
+        <div class="col-md-4 p-0 position-relative">
+          <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
+          <input id="search" type="text" class="form-control search-input" name="search"
+            placeholder="Search for Checkouts">
+        </div>
+      </div>
+    </div>
+    {{-- table --}}
     <table class="table table-hover">
       <thead>
         <tr>
