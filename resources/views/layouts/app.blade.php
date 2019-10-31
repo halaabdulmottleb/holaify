@@ -34,8 +34,36 @@
     </div>
     {{-- script files --}}
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <script>
+        $('.link').hover(function(){
+            $(this).find("a").toggleClass('social-active')
+            $(this).find( "a span" ).toggleClass('d-none');
+        });
+        $('.next').on('click',function(){
+            if($('.first-div').hasClass('show')){
+            $('.section').removeClass('show');
+            $('.second-div').addClass('show');            
+            }else{
+            $('.section').removeClass('show');                
+            $('.third-div').addClass('show');
+            }
+        })
+        $('.back').on('click',function(){
+            if($('.third-div').hasClass('show')){
+            $('.section').removeClass('show');
+            $('.second-div').addClass('show');
+            }else{
+            $('.section').removeClass('show');
+            $('.first-div').addClass('show');
+            }
+        })
+    </script>
 </body>
 
 </html>

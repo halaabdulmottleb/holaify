@@ -18646,26 +18646,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-new Vue({
-  el: '#login-form',
-  data: {
-    email: '',
-    password: '',
-    errors: {}
-  },
-  methods: {
-    onSubmit: function onSubmit() {
-      var _this = this;
-
-      axios.get('/auth', {
-        email: this.email,
-        password: this.password
-      }).then()["catch"](function (error) {
-        _this.errors = error.response.data;
-      });
-    }
-  }
-});
+new Vue({});
 
 /***/ }),
 
@@ -18821,8 +18802,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! D:\Main\laravel projects\test\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! D:\Main\laravel projects\test\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! D:\Main\laravel projects\holafiy\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! D:\Main\laravel projects\holafiy\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
