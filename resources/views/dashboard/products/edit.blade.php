@@ -1,11 +1,11 @@
 @extends('layouts.dashboard.app')
-@section('title','Create Product')
+@section('title','Edit Product')
 @section('content')
 <div class="content">
     {{-- head --}}
     <div class="header p-2 pb-3">
         <div class="head">
-            <h3>Create New Product..</h3>
+            <h3>Edit Product..</h3>
         </div>
         {{-- back to products --}}
         <div class="add">
@@ -43,7 +43,7 @@
                             <div class="col-12 col-md-10 ml-md-4">
                                 <textarea name="description"
                                     class="form-control @error('description') is-invalid @enderror" id="description"
-                                    rows="5" placeholder="Enter Collection Description"></textarea>
+                                    rows="5" placeholder="Enter Collection title"></textarea>
 
                                 @error('description')
                                 <span class="invalid-feedback" role="alert">

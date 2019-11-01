@@ -9,7 +9,7 @@
     </div>
     {{-- add collection --}}
     <div class="add">
-      <a class="btn btn-primary" href="{{route('create_collection')}}">
+      <a class="btn btn-primary" href="/auth/collections/create">
         Add Collection
       </a>
     </div>
@@ -34,10 +34,15 @@
         <tr>
           <th scope="row">#</th>
           <th scope="col">Collections</th>
+          <th scope="col">no. of Products</th>
         </tr>
       </thead>
       <tbody>
         <tr>
+          {{-- <td>1</td>
+          <td>{{$collection->title}}</td>
+          <td>{{$collection->no-of-products}}</td>
+           --}}
           <td>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input" id="collectionID" name="collectionID">
@@ -45,6 +50,7 @@
             </div>
           </td>
           <td><a href="#">Phones</a></td>
+          <td>3 Product</td>
         </tr>
       </tbody>
     </table>

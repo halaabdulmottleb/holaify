@@ -9,7 +9,7 @@
     </div>
     {{-- add product --}}
     <div class="add">
-      <a class="btn btn-primary" href="{{route('create_product')}}">
+      <a class="btn btn-primary" href="/auth/products/create">
         Add Product
       </a>
     </div>
@@ -33,18 +33,22 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Product</th>
+          <th scope="col">Vendor</th>
           <th scope="col">Inventory</th>
           <th scope="col">Type</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          {{-- <td>{{$product->name}}</td>
+          {{-- <td>1</td>
+          <td>{{$product->name}}</td>
+          <td>{{$product->vendor}}</td>
           <td>{{$product->inventory}} In Stock</td>
           <td>{{$product->type}}</td> --}}
           <td>1</td>
           <td><a href="#"> <img src="/img/default-product.svg" class="img-thumbnail" width="35"
                 style="display:inline-block;margin-right:8px"> Iphone</a></td>
+          <td>Al bla7</td>      
           <td>5 in stock</td>
           <td>Mobile</td>
         </tr>

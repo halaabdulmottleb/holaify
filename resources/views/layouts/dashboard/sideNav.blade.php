@@ -1,9 +1,9 @@
 <nav id="navbarSupportedContent2" class="collapse wow slideInLeft" data-wow-duration="2s" data-wow-delay="0s">
   <ul class="nav nav-tabs py-3">
     <div class="container">
-      {{-- home --}}
+      {{-- overview --}}
       <li class="nav-item">
-        <a class="nav-link" href="{{route('home')}}"><i class="fas fa-home"></i> Home</a>
+        <a class="nav-link" href="/auth"><i class="fas fa-home"></i> Overview</a>
       </li>
       {{-- orders --}}
       <li class="nav-item">
@@ -11,10 +11,10 @@
           Orders</a>
         <div class="dropdown-ul">
           <div class="li">
-            <a class="dropdown-li" href="{{route('orders')}}">All Orders</a>
+            <a class="dropdown-li" href="/auth/orders">All Orders</a>
           </div>
           <div class="li">
-            <a class="dropdown-li" href="{{route('checkouts')}}">Abandoned checkouts</a>
+            <a class="dropdown-li" href="/auth/checkouts">Abandoned checkouts</a>
           </div>
         </div>
       </li>
@@ -24,10 +24,10 @@
           Products</a>
         <div class="dropdown-ul">
           <div class="li">
-            <a class="dropdown-li" href="{{route('products')}}">All Products</a>
+            <a class="dropdown-li" href="/auth/products">All Products</a>
           </div>
           <div class="li">
-            <a class="dropdown-li" href="{{route('collections')}}">Collections</a>
+            <a class="dropdown-li" href="/auth/collections">Collections</a>
           </div>
         </div>
       </li>
@@ -37,16 +37,12 @@
           Users</a>
         <div class="dropdown-ul">
           <div class="li">
-            <a class="dropdown-li" href="{{route('admins')}}">Admins</a>
+            <a class="dropdown-li" href="/auth/admins">Admins</a>
           </div>
           <div class="li">
-            <a class="dropdown-li" href="{{route('customers')}}">Customers</a>
+            <a class="dropdown-li" href="/auth/customers">Customers</a>
           </div>
         </div>
-      </li>
-      {{-- analytics --}}
-      <li class="nav-item">
-        <a class="nav-link" href="{{route('analytics')}}"><i class="fas fa-chart-pie"></i> Analytics</a>
       </li>
     </div>
   </ul>

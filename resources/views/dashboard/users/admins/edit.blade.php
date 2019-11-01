@@ -1,11 +1,11 @@
 @extends('layouts.dashboard.app')
-@section('title','Create Admin')
+@section('title','Edit Admin')
 @section('content')
 <div class="content">
     {{-- head --}}
     <div class="header p-2 pb-3">
         <div class="head">
-            <h3>Create New Admin..</h3>
+            <h3>Edit Admin..</h3>
         </div>
         {{-- back to admins --}}
         <div class="add">
@@ -107,7 +107,7 @@
                 {{-- submit --}}
                 <div class="col-md-4 mb-2">
                     <button type="submit" class="btn btn-primary w-100">
-                        {{ __('Create') }}
+                        {{ __('Save') }}
                     </button>
                 </div>
                 {{-- back --}}

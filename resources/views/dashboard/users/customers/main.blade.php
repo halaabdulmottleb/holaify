@@ -9,7 +9,7 @@
     </div>
     {{-- add Customer --}}
     <div class="add">
-      <a class="btn btn-primary" href="{{route('create_customer')}}">
+      <a class="btn btn-primary" href="/auth/customers/create">
         Add Customer
       </a>
     </div>
@@ -41,6 +41,12 @@
       </thead>
       <tbody>
         <tr>
+            {{-- <td scope="col">1</td>
+            <td><a href="{{$customer->id]}"><img src="{{$customer->img}}" class="img-thumbnail" width="35"
+                  style="display:inline-block;margin-right:8px">{{$customer->name}}</a></td>
+            <td>{{$customer->Country}}</td>
+            <td>{{$customer->orders}}</td>
+            <td>{{$customer->spent}}</td> --}}
           <td scope="col">1</td>
           <td><a href="#"><img src="/img/default-user.svg" class="img-thumbnail" width="35"
                 style="display:inline-block;margin-right:8px"> Mark</a></td>

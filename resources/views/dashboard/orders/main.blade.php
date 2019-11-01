@@ -38,9 +38,14 @@
     </thead>
     <tbody>
       <tr>
+          {{-- <td>1</td>
+          <td><a href="/auth/orders/{{$order->id}}"> <img src="{{$order->img}}" class="img-thumbnail" width="35"
+                style="display:inline-block;margin-right:8px">{{$order->custoemer->name}}</a></td>
+          <td>{{$order->product->title}}</td>
+          <td>{{$order->customer->address}}</td> --}}
         <td>1</td>
         <td><a href="#"> <img src="/img/default-user.svg" class="img-thumbnail" width="35"
-              style="display:inline-block;margin-right:8px"> Mark</a></td>
+              style="display:inline-block;margin-right:8px">Mark</a></td>
         <td>order</td>
         <td>41st.</td>
       </tr>

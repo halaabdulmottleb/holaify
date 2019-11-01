@@ -1,11 +1,11 @@
 @extends('layouts.dashboard.app')
-@section('title','Create Collection')
+@section('title','Edit Collection')
 @section('content')
 <div class="content">
   {{-- head --}}
   <div class="header p-2 pb-3">
     <div class="head">
-      <h3>Create New Collection..</h3>
+      <h3>Edit Collection..</h3>
     </div>
     {{-- back to collections --}}
     <div class="add">
@@ -90,7 +90,7 @@
         {{-- back --}}
         <div class="col-md-2">
           <span class="btn btn-primary w-100 btn-dis">
-            <a href="{{route('collections')}}"></a> {{ __('Discard') }}
+            <a href="/auth/collections"></a> {{ __('Discard') }}
           </span>
         </div>
       </div>

@@ -9,7 +9,7 @@
     </div>
     {{-- add admins --}}
     <div class="add">
-      <a class="btn btn-primary" href="{{route('create_admin')}}">
+      <a class="btn btn-primary" href="/auth/admins/create">
         Add Admin
       </a>
     </div>
@@ -39,6 +39,11 @@
       </thead>
       <tbody>
         <tr>
+            {{-- <td>1</td>
+            <td><a href="/auth/admins/{{$admin->id}}"> <img src="{{$admin->img}}" class="img-thumbnail" width="35"
+                  style="display:inline-block;margin-right:8px">{{$admin->name}}</a></td>
+            <td>{{$admin->email}}</td>
+            <td>{{$admin->number}}</td> --}}
           <td>1</td>
           <td><a href="#"> <img src="/img/default-user.svg" class="img-thumbnail" width="35"
                 style="display:inline-block;margin-right:8px"> Mark</a></td>

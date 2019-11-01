@@ -1,11 +1,11 @@
 @extends('layouts.dashboard.app')
-@section('title','Create Customer')
+@section('title','Edit Customer')
 @section('content')
 <div class="content">
     {{-- head --}}
     <div class="header p-2 pb-3">
         <div class="head">
-            <h3>Create New Customer ..</h3>
+            <h3>Edit Customer ..</h3>
         </div>
         {{-- back to Customers --}}
         <div class="add">
