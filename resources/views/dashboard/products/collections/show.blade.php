@@ -9,7 +9,7 @@
     </div>
     {{-- back to collections --}}
     <div class="add">
-      <a class="" href="{{route('collections')}}">
+      <a class="" href="/auth/collections">
         Collections
       </a>
     </div>
@@ -17,9 +17,9 @@
   {{-- content --}}
   <div class="main px-4 py-3">
     {{-- info --}}
-    <div class="row w-100 mx-0">
+    <div class="row w-100 mx-0 justify-content-around">
       {{-- left side. --}}
-      <div class="col-md-8">
+      <div class="mx-3 mt-3 mb-0" style="flex-grow:2">
         <div class="form">
           <div class="container">
             <div class="div px-4">
@@ -68,30 +68,51 @@
         </div>
       </div>
       {{-- right side --}}
-      <div class="col-md-4">
-        {{-- collection --}}
+      <div class="m-3" style="flex-grow:1">
+        {{-- collection img --}}
         <div class="form">
           <div class="container">
             <label class="px-2 pb-2">Collection Image</label>
             <div class="div px-2">
               {{-- img --}}
-              <img src="/img/default-user.svg" alt="collection-pic" width="200" class="img-thumbnail m-auto">
+              <img src="/img/default-product.svg" alt="collection-pic" width="200" class="img-thumbnail m-auto"
+                data-toggle="modal" data-target="#showImg">
+              {{-- preview Image  --}}
+              <div class="modal fade" id="showImg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header border-none">
+                      <button data-dismiss="modal">
+                        <span>&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <img src="#" id="prevImg" width="500" class="img-fluid m-auto">
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    {{-- products --}}
+    {{-- edit && delete --}}
     <div class="row w-100 mx-0">
-      <div class="col-md-8">
-        {{-- delte collection --}}
-        <div class="col-md-4 px-0">
-          <form action="" method="get">
-            <button type="submit" class="btn btn-primary w-100 del-user">
-              {{ __('Delete Collection') }}
-            </button>
-          </form>
-        </div>
+      {{-- Edit product --}}
+      <div class="col-md-3">
+          <a href="#" class="btn btn-primary w-100 btn-edit">
+            {{ __('Edit') }}
+          </a>
+      </div>
+      {{-- delte product --}}
+      <div class="col-md-3">
+        <form action="" method="get">
+          <button type="submit" class="btn btn-primary w-100 del-user">
+            {{ __('Delete') }}
+          </button>
+        </form>
       </div>
     </div>
   </div>

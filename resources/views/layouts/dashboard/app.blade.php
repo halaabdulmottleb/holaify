@@ -8,20 +8,17 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>Holafiy - @yield('title')</title>
+    <title>Holaify - @yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.lineicons.com/1.0.1/LineIcons.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
@@ -40,10 +37,10 @@
                 </button>
                 {{-- nav brand --}}
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="/img/brand.svg" width="25" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s"
+                    <img src="/img/brand.svg" width="30" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s"
                         alt="brand-img">
-                    <span class="pl-2 wow fadeInLeft" data-wow-duration="1s"
-                        data-wow-delay="1s">{{ config('app.name', 'Laravel') }}</span>
+                    <span class="wow fadeInLeft" data-wow-duration="1s"
+                        data-wow-delay="1s">{{ config('app.name', 'Holaify') }}</span>
                 </a>
 
                 <div class="navs">
@@ -63,8 +60,11 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/">
+                                        <i class="fas fa-globe pr-2"></i> {{ __('Site') }}
+                                        </a>
                                 {{-- profile --}}
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/auth/admins/show">
                                     <i class="far fa-user pr-2"></i> {{ __('Profile') }}
                                 </a>
                                 {{-- logout --}}
@@ -103,14 +103,16 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
     <script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    @yield('script')
     <script>
-        var simplemde = new SimpleMDE();
         // check if file select
     function readURL(input) {
         if (input.files && input.files[0]) {
             var reader = new FileReader();
             reader.onload = function (e) {
                 $('#img').attr('src', e.target.result);
+                $('#prevImg').attr('src', e.target.result);
             }
             reader.readAsDataURL(input.files[0]);
         }

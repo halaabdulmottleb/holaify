@@ -10,11 +10,16 @@
   </div>
   {{-- content --}}
   <div class="main p-3">
-    {{-- @forelse ($checkouts as $checkout) --}}
+    {{-- @if(!$checkouts->count()) --}}
+    {{-- <div class="not-yet my-3">
+      <h3 class="p-2 my-3">No Abandoed Checkouts Yet</h3>
+      <img src="/img/cusomters.svg" alt="add-collection" width="350" style="float:right">
+    </div> 
+    @else--}}
     {{-- search --}}
     <div class="search w-100 py-3">
       <div class="form-group mb-0">
-        <div class="col-md-4 p-0 position-relative">
+        <div class="p-0 position-relative">
           <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
           <input id="search" type="text" class="form-control search-input" name="search"
             placeholder="Search for Checkouts">
@@ -31,20 +36,17 @@
         </tr>
       </thead>
       <tbody>
+        {{-- @foreach($checkouts as $checkout) --}}
         <tr>
           <th scope="row">1</th>
-          <td><a href="#"> <img src="/img/default-user.svg" class="img-thumbnail" width="35"
-                style="display:inline-block;margin-right:8px"> Mark</a></td>
+          <td><a href="#"> <img src="/img/default-user.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
+                style="margin-right:8px">Mark</a></td>
           <td>iphone7</td>
         </tr>
+        {{-- $endforeach --}}
       </tbody>
     </table>
-    {{-- @empty --}}
-    {{-- <div class="not-yet my-3">
-      <h3 class="p-2 my-3">No Abandoed Checkouts Yet</h3>
-      <img src="/img/cusomters.svg" alt="add-collection" width="350" style="float:right">
-    </div> --}}
-    {{-- @endforelse --}}
+    {{-- @endif --}}
   </div>
 </div>
 @endsection

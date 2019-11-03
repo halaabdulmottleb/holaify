@@ -16,12 +16,18 @@
   </div>
   {{-- content --}}
   <div class="main p-3">
-    {{-- @forelse ($collections as $collection) --}}
+
+    {{-- @if(!$collections->count()) --}}
+    {{-- <div class="not-yet ">
+      <h3 class="my-3">No Collections Yet</h3>
+      <img src="/img/not-found.svg" alt="no-collection" width="380">
+    </div>
+    @else --}}
     {{-- select & search --}}
     <div class="search w-100 py-3">
       {{-- search --}}
       <div class="form-group mb-0">
-        <div class="col-md-4 p-0 position-relative">
+        <div class="p-0 position-relative">
           <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
           <input id="search" type="text" class="form-control search-input" name="search"
             placeholder="Search for Collections">
@@ -38,28 +44,20 @@
         </tr>
       </thead>
       <tbody>
+        {{-- @foreach($collections as $collection) --}}
         <tr>
           {{-- <td>1</td>
           <td>{{$collection->title}}</td>
           <td>{{$collection->no-of-products}}</td>
-           --}}
-          <td>
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" id="collectionID" name="collectionID">
-              <label class="custom-control-label" for="customCheck1">1</label>
-            </div>
-          </td>
+          --}}
+          <td>1</td>
           <td><a href="#">Phones</a></td>
           <td>3 Product</td>
         </tr>
+        {{-- @endforeach --}}
       </tbody>
     </table>
-    {{-- @empty --}}
-    {{-- <div class="not-yet ">
-      <h3 class="my-3">No Collections Yet</h3>
-      <img src="/img/not-found.svg" alt="no-collection" width="380">
-    </div> --}}
-    {{-- @endforelse --}}
+    {{-- @endif --}}
   </div>
 </div>
 @endsection

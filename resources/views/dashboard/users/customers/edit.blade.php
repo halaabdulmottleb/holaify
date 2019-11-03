@@ -6,6 +6,7 @@
     <div class="header p-2 pb-3">
         <div class="head">
             <h3>Edit Customer ..</h3>
+            {{-- <h3>Edit {{$customer->name}} ..</h3> --}}
         </div>
         {{-- back to Customers --}}
         <div class="add">
@@ -16,8 +17,9 @@
     </div>
     {{-- content --}}
     <div class="main p-3">
-        <form method="POST" action="/auth/customers" class="w-100 row m-0">
+        <form method="POST" action="/auth/customers/{{$customer->id}}" class="w-100 row m-0">
             @csrf
+            @method('PATCH')
             <div class="row w-100 m-0">
                 {{-- label --}}
                 <div class="col-md-2 p-0">
@@ -35,6 +37,7 @@
                                     <input id="name" type="text"
                                         class="form-control @error('name') is-invalid @enderror" name="name" required
                                         autofocus placeholder="Full Name">
+                                    {{-- value="{{ $customer->name }}" --}}
                                     @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -47,6 +50,7 @@
                                     <input id="UserName" type="text"
                                         class="form-control @error('userName') is-invalid @enderror" name="userName"
                                         required placeholder="UserName" autocomplete="none">
+                                    {{-- value="{{ $customer->userName }}" --}}
                                     @error('userName')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -61,6 +65,7 @@
                                     <input id="email" type="email"
                                         class="form-control @error('email') is-invalid @enderror" name="email" required
                                         placeholder="Email Address" autocomplete="none">
+                                    {{-- value="{{ $customer->email }}" --}}
                                     @error('email')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -75,6 +80,7 @@
                                     <input id="number" type="text"
                                         class="form-control @error('number') is-invalid @enderror" name="number"
                                         required placeholder="Phone Number">
+                                    {{-- value="{{ $customer->number }}" --}}
                                     @error('number')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -122,6 +128,7 @@
                                     <input id="company" type="text"
                                         class="form-control @error('company') is-invalid @enderror" name="company"
                                         placeholder="Company Name">
+                                    {{-- value="{{ $customer->company }}" --}}
                                     @error('company')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -136,6 +143,7 @@
                                     <input id="address" type="text"
                                         class="form-control @error('address') is-invalid @enderror" name="address"
                                         placeholder="Address">
+                                    {{-- value="{{ $customer->address }}" --}}
                                     @error('address')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -150,6 +158,7 @@
                                     <input id="apartment" type="text"
                                         class="form-control @error('apartment') is-invalid @enderror" name="apartment"
                                         placeholder="Apartment">
+                                    {{-- value="{{ $customer->apartment }}" --}}
                                     @error('apartment')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -162,6 +171,7 @@
                                     <input id="city" type="text"
                                         class="form-control @error('city') is-invalid @enderror" name="city"
                                         placeholder="City">
+                                    {{-- value="{{ $customer->city }}" --}}
                                     @error('city')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -174,7 +184,7 @@
                                     <input id="country" type="text"
                                         class="form-control @error('country') is-invalid @enderror" name="country"
                                         placeholder="Country">
-
+                                    {{-- value="{{ $customer->country }}" --}}
                                     @error('country')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
@@ -191,7 +201,7 @@
                 {{-- submit --}}
                 <div class="col-md-4 mb-2">
                     <button type="submit" class="btn btn-primary w-100">
-                        {{ __('Create') }}
+                        {{ __('Save') }}
                     </button>
                 </div>
                 {{-- back --}}

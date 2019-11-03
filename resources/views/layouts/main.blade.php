@@ -29,9 +29,9 @@
       <div class="container">
         {{-- nav brand --}}
         <a class="navbar-brand" href="{{ url('/') }}">
-          <img src="/img/brand.svg" width="25" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s"
+          <img src="/img/brand.svg" width="30" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s"
             alt="brand-img">
-          <span class="pl-2 wow fadeInLeft" data-wow-duration="1s"
+          <span class="wow fadeInLeft" data-wow-duration="1s"
             data-wow-delay="1s">{{ config('app.name', 'Laravel') }}</span>
         </a>
 

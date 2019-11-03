@@ -2,9 +2,9 @@
     <div class="container form">
         <div id="login-form" class="login-form p-4">
             <div class="header d-flex p-2 my-3">
-                <img src="/img/brand2.svg" width="35" class="mr-2 wow fadeIn" data-wow-duration="2s" data-wow-delay="0s"
+                <img src="/img/brand.svg" width="05" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s"
                     alt="brand-img">
-                <h1 class="pl-2 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">Holafiy</h1>
+                <h1 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">Holafiy</h1>
             </div>
             <div class="card p-2 mt-4">
                 <div class="card-header px-4">

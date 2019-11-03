@@ -9,9 +9,9 @@
                 <div class="left-side">
                     <div class="container">
                         <div class="header d-flex py-5 px-4">
-                            <img src="/img/brand.svg" width="35" class="mr-1 wow fadeIn" data-wow-duration="2s"
+                            <img src="/img/brand.svg" width="40" class="wow fadeIn" data-wow-duration="2s"
                                 data-wow-delay="0s" alt="brand-img">
-                            <h1 class="pl-2 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">Holafiy</h1>
+                            <h1 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">Holaify</h1>
                         </div>
                         <img src="/img/log.svg" alt="login-img" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s">
                     </div>
@@ -84,7 +84,7 @@
                                         </div>
                                     </div>
                                     {{-- submit btn --}}
-                                    <div class="form-group">
+                                    <div class="form-group mb-0">
                                         <div class="col-md-8 m-auto text-center">
                                             <button type="submit" class="btn btn-primary w-100 heartbeat">
                                                 {{ __('Login') }} <i class="fas fa-sign-in-alt"></i>

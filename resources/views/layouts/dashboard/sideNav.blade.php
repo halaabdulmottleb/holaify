@@ -3,7 +3,7 @@
     <div class="container">
       {{-- overview --}}
       <li class="nav-item">
-        <a class="nav-link" href="/auth"><i class="fas fa-home"></i> Overview</a>
+        <a class="nav-link" href="/auth"><i class="fas fa-chart-pie"></i> Overview</a>
       </li>
       {{-- orders --}}
       <li class="nav-item">

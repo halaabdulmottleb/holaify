@@ -6,6 +6,7 @@
     <div class="header p-2 pb-3">
         <div class="head">
             <h3>Edit Admin..</h3>
+            {{-- <h3>Edit {{$admin->name}}..</h3> --}}
         </div>
         {{-- back to admins --}}
         <div class="add">
@@ -16,8 +17,9 @@
     </div>
     {{-- content --}}
     <div class="main p-3">
-        <form method="POST" action="/auth/admins" class="w-100 row m-0">
+        <form method="POST" action="/auth/admins/{{$admin->name}}" class="w-100 row m-0">
             @csrf
+            @method('PATCH')
             {{-- label --}}
             <div class="col-md-2 p-0">
                 <label class="py-4">Admin Info:</label>
@@ -33,6 +35,7 @@
                                 <label for="title" class="col">{{ __('Full Name') }}</label>
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror"
                                     name="name" required autofocus placeholder="Full Name">
+                                {{-- value="{{ $admin->name }}" --}}
                                 @error('name')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -45,6 +48,7 @@
                                 <input id="UserName" type="text"
                                     class="form-control @error('userName') is-invalid @enderror" name="userName"
                                     required placeholder="UserName" autocomplete="none">
+                                {{-- value="{{ $admin->userName }}" --}}
                                 @error('userName')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -58,6 +62,7 @@
                                 <label for="title" class="col">{{ __('Email Adress') }}</label>
                                 <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
                                     name="email" required placeholder="Email Address" autocomplete="none">
+                                {{-- value="{{ $admin->email }}" --}}
                                 @error('email')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -72,6 +77,7 @@
                                 <input id="number" type="text"
                                     class="form-control @error('number') is-invalid @enderror" name="number" required
                                     placeholder="Phone Number">
+                                {{-- value="{{ $admin->number }}" --}}
                                 @error('number')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
@@ -86,7 +92,6 @@
                                 <input id="password" type="password"
                                     class="form-control @error('password') is-invalid @enderror" name="password"
                                     placeholder="Password" autocomplete="none">
-
                                 @error('password')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
