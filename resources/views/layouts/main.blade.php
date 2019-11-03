@@ -32,7 +32,7 @@
           <img src="/img/brand.svg" width="30" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s"
             alt="brand-img">
           <span class="wow fadeInLeft" data-wow-duration="1s"
-            data-wow-delay="1s">{{ config('app.name', 'Laravel') }}</span>
+            data-wow-delay="1s">{{ config('app.name', 'Holaify') }}</span>
         </a>
 
         <div class="navs">
@@ -58,7 +58,7 @@
 
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 {{-- profile --}}
-                <a class="dropdown-item" href="#">
+                <a class="dropdown-item" href="/auth">
                   <i class="far fa-user pr-2"></i> {{ __('Dashboard') }}
                 </a>
                 {{-- profile --}}
