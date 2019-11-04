@@ -45,7 +45,7 @@
             @guest
             <div class="nav-item">
               {{-- cart --}}
-              <a class="nav-link" href="/profile/cart" v-pre>
+              <a class="nav-link" href="/cart" v-pre>
                 <i class="lni-cart"></i>
               </a>
             </div>
