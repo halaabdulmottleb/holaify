@@ -201,5 +201,9 @@
 @section('script')
 <script>
     var simplemde = new SimpleMDE();
+    $('input[name="tags"]').amsifySuggestags({
+        type :'bootstrap',
+        tagLimit: 2
+    });
 </script>
 @endsection

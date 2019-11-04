@@ -32,8 +32,10 @@
         </div>
       </div>
       <div class="grid">
-        <i class="fas fa-th-list" :class="{'active' : !grid}" @click="table()" data-toggle="tooltip" data-placement="bottom" title="List"></i>
-        <i class="fas fa-th-large" :class="{'active' : grid }" @click="Grid()" data-toggle="tooltip" data-placement="bottom" title="Grid"></i>
+        <i class="fas fa-th-list" :class="{'active' : !grid}" @click="table()" data-toggle="tooltip"
+          data-placement="bottom" title="List"></i>
+        <i class="fas fa-th-large" :class="{'active' : grid }" @click="Grid()" data-toggle="tooltip"
+          data-placement="bottom" title="Grid"></i>
       </div>
     </div>
     {{-- grid --}}
@@ -57,7 +59,12 @@
     <table class="table table-hover" v-else>
       <thead>
         <tr>
-          <th scope="col" width="15">#</th>
+          <th scope="col" width="15">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input"  onchange="checkAll(this)" name="selectAll" id="selectAll">
+              <label class="custom-control-label" for="selectAll"></label>
+            </div>
+          </th>
           <th scope="col">Name</th>
           <th scope="col">Email</th>
           <th scope="col">Number</th>
@@ -66,22 +73,33 @@
       <tbody>
         {{-- @foreach($admin as admin) --}}
         <tr>
-          {{-- <td>1</td>
-            <td><a href="/auth/admins/{{$admin->id}}"> <img src="{{$admin->img}}" class="img-thumbnail d-none d-md-inline-block" width="35"
-            style="margin-right:8px">{{$admin->name}}</a></td>
-          <td>{{$admin->email}}</td>
-          <td>{{$admin->number}}</td> --}}
-          <td>1</td>
-          <td><a href="#"><img src="/img/default-user.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
-                style="margin-right:8px">Mark</a></td>
-          <td>admin@admin.com</td>
-          <td>01155536247</td>
-        </tr>
-        {{-- @endforeach --}}
-      </tbody>
-    </table>
-    {{-- @endforeach --}}
+          {{-- 
+            <td>
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="admin" value="{{$admin->id}}" id="{{$admin->id}}">
+          <label class="custom-control-label" for="{{$admin->id}}"></label>
   </div>
+  </td>
+  <td><a href="/auth/admins/{{$admin->id}}"> <img src="{{$admin->img}}" class="img-thumbnail d-none d-md-inline-block"
+        width="35" style="margin-right:8px">{{$admin->name}}</a></td>
+  <td>{{$admin->email}}</td>
+  <td>{{$admin->number}}</td> --}}
+  <td>
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" name="admin" value="adminID" id="adminID">
+      <label class="custom-control-label" for="adminID"></label>
+    </div>
+  </td>
+  <td><a href="#"><img src="/img/default-user.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
+        style="margin-right:8px">Mark</a></td>
+  <td>admin@admin.com</td>
+  <td>01155536247</td>
+  </tr>
+  {{-- @endforeach --}}
+  </tbody>
+  </table>
+  {{-- @endif --}}
+</div>
 </div>
 @endsection
 @section('script')
@@ -100,5 +118,21 @@
     }
   }
  })
+ function checkAll(ele) {
+     var checkboxes = $('input[name="product"]');
+     if (ele.checked) {
+         for (var i = 0; i < checkboxes.length; i++) {
+             if (checkboxes[i].type == 'checkbox') {
+                 checkboxes[i].checked = true;
+             }
+         }
+     } else {
+         for (var i = 0; i < checkboxes.length; i++) {
+             if (checkboxes[i].type == 'checkbox') {
+                 checkboxes[i].checked = false;
+             }
+         }
+     }
+ }
 </script>
 @endsection

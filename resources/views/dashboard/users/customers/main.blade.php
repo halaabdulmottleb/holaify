@@ -61,7 +61,12 @@
     <table class="table table-hover" v-else>
       <thead>
         <tr>
-          <th scope="col">#</th>
+          <th scope="col" width="15">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input"  onchange="checkAll(this)" name="selectAll" id="SelectAll">
+              <label class="custom-control-label" for="SelectAll"></label>
+            </div>
+          </th>
           <th scope="col">Name</th>
           <th scope="col">Country</th>
           <th scope="col">Orders</th>
@@ -71,14 +76,24 @@
       <tbody>
         {{-- @foreach ($customers as $customer) --}}
         <tr>
-          {{-- <td scope="col">1</td>
-            <td><a href="{{$customer->id]}"><img src="{{$customer->img}}" class="img-thumbnail d-none
+          {{-- <td scope="col">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="customer" value="{{$customer->id}}" id="{{customer->id}}">
+              <label class="custom-control-label" for="{{$customer->id}}"></label>
+            </div>
+          </td>
+            <td><a href="/auth/customers/{{$customer->id]}"><img src="{{$customer->img}}" class="img-thumbnail d-none
           d-md-inline-block" width="35"
           style="margin-right:8px">{{$customer->name}}</a></td>
           <td>{{$customer->Country}}</td>
           <td>{{$customer->orders}}</td>
           <td>{{$customer->spent}}</td> --}}
-          <td scope="col">1</td>
+          <td scope="col">
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" name="customer" value="customerID" id="selectAll">
+                  <label class="custom-control-label" for="selectAll"></label>
+                </div>
+          </td>
           <td><a href="#"><img src="/img/default-user.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
                 style="margin-right:8px">Mark</a></td>
           <td>Egypt</td>
@@ -108,5 +123,21 @@
     }
   }
  })
+ function checkAll(ele) {
+     var checkboxes = $('input[name="product"]');
+     if (ele.checked) {
+         for (var i = 0; i < checkboxes.length; i++) {
+             if (checkboxes[i].type == 'checkbox') {
+                 checkboxes[i].checked = true;
+             }
+         }
+     } else {
+         for (var i = 0; i < checkboxes.length; i++) {
+             if (checkboxes[i].type == 'checkbox') {
+                 checkboxes[i].checked = false;
+             }
+         }
+     }
+ }
 </script>
 @endsection

@@ -20,7 +20,7 @@
             @csrf
             <div class="row w-100 m-0">
                 {{-- label --}}
-                <div class="col-md-2 p-0">
+                <div class="col-md-3 p-0">
                     <label class="py-4">Cutomser Info:</label>
                 </div>
                 {{-- inputs --}}
@@ -108,7 +108,7 @@
             </div>
             <div class="row w-100 m-0">
                 {{-- label --}}
-                <div class="col-md-2">
+                <div class="col-md-3">
                     <label class="py-4">Address Info:</label>
                 </div>
                 {{-- inputs --}}

@@ -38,7 +38,7 @@
     <table class="table table-hover">
       <thead>
         <tr>
-          <th scope="row">#</th>
+          <th scope="col" width="15">#</th>
           <th scope="col">Collections</th>
           <th scope="col">no. of Products</th>
         </tr>
@@ -47,7 +47,7 @@
         {{-- @foreach($collections as $collection) --}}
         <tr>
           {{-- <td>1</td>
-          <td>{{$collection->title}}</td>
+          <td><a href="/auth/collections/{{$collection->id}}">{{$collection->title}}</a></td>
           <td>{{$collection->no-of-products}}</td>
           --}}
           <td>1</td>

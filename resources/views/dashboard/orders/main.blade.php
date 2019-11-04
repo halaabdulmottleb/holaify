@@ -35,7 +35,7 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <th scope="col" width="15">#</th>
         <th scope="col">Customer</th>
         <th scope="col">Order</th>
         <th scope="col">address</th>

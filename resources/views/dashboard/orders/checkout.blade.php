@@ -30,7 +30,12 @@
     <table class="table table-hover">
       <thead>
         <tr>
-          <th scope="col">#</th>
+          <th scope="col" width="15">
+                  <div class="custom-control custom-checkbox">
+                      <input type="checkbox" class="custom-control-input" name="SelectAll" id="SelectAll">
+                      <label class="custom-control-label" for="SelectAll"></label>
+                    </div>
+          </th>
           <th scope="col">Customer</th>
           <th scope="col">Order</th>
         </tr>
@@ -38,7 +43,21 @@
       <tbody>
         {{-- @foreach($checkouts as $checkout) --}}
         <tr>
-          <th scope="row">1</th>
+            {{-- <td>
+              <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" name="{{$checkout->id}}" id="{{$checkout->id}}">
+              <label class="custom-control-label" for="{{$cheakout->id}}"></label>
+            </div>
+            </td>
+            <td><a href=""><img src="{{$checkout->customer->img}}" class="img-thumbnail d-none d-md-inline-block" width="35"
+                  style="margin-right:8px">{{$checkout->customer->name}}</a></td>
+            <td>{{$checkout->order->title}}</td> --}}
+          <td>
+              <div class="custom-control custom-checkbox">
+                  <input type="checkbox" class="custom-control-input" name="" id="">
+                  <label class="custom-control-label" for=""></label>
+                </div>
+          </td>
           <td><a href="#"> <img src="/img/default-user.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
                 style="margin-right:8px">Mark</a></td>
           <td>iphone7</td>

@@ -433,3 +433,7 @@ label {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.47);
     color: #474747;
 }
+
+input.amsify-suggestags-input{
+    width:90px !important;
+}
