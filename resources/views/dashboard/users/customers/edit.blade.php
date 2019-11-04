@@ -20,6 +20,22 @@
         <form method="POST" action="/auth/customers/{{$customer->id}}" class="w-100 row m-0">
             @csrf
             @method('PATCH')
+            {{-- save --}}
+            <div class="row w-100 mx-0 justify-content-end">
+                {{-- submit --}}
+                <div class="mx-3">
+                    <button type="submit" class="btn btn-primary w-100">
+                        {{ __('Save') }}
+                    </button>
+                </div>
+                {{-- back --}}
+                <div class="mx-2">
+                    <a href="/auth/customers" class="btn btn-primary w-100 btn-dis">
+                        {{ __('Discard') }}
+                    </a>
+                </div>
+            </div>
+            {{-- info --}}
             <div class="row w-100 m-0">
                 {{-- label --}}
                 <div class="col-md-2 p-0">
@@ -194,21 +210,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            {{-- btns --}}
-            <div class="form-group row w-100 mx-0 d-flex justify-content-center">
-                {{-- submit --}}
-                <div class="col-md-4 mb-2">
-                    <button type="submit" class="btn btn-primary w-100">
-                        {{ __('Save') }}
-                    </button>
-                </div>
-                {{-- back --}}
-                <div class="col-md-2">
-                    <span class="btn btn-primary w-100 btn-dis">
-                        <a href="/auth/customers"></a> {{ __('Discard') }}
-                    </span>
                 </div>
             </div>
         </form>

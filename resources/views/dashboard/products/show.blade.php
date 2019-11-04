@@ -15,10 +15,30 @@
             </a>
         </div>
     </div>
-    {{-- form --}}
+    {{-- product --}}
     <div class="main px-4 py-3">
+        {{-- edit && delete --}}
+        <div class="row w-100 mx-0 justify-content-end">
+            {{-- Edit product --}}
+            <div class="mx-2">
+                <a href="#" class="btn btn-primary w-100 btn-edit">
+                    {{ __('Edit') }}
+                    <i class="fas fa-edit"></i>
+                </a>
+            </div>
+            {{-- delte product --}}
+            <div class="mx-3">
+                <form action="" method="get">
+                    <button type="submit" class="btn btn-primary w-100 del-user">
+                        {{ __('Delete') }}
+                        <i class="far fa-trash-alt"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        {{-- content --}}
         <div class="w-100 row m-0 justify-content-around">
-            <div class="mx-3 mt-3 mb-0" style="flex-grow:2">
+            <div class="mx-3" style="flex-grow:2">
                 {{-- title ,desc. --}}
                 <div class="form">
                     <div class="container">
@@ -74,7 +94,7 @@
                 </div>
             </div>
             {{-- right side --}}
-            <div class="m-3" style="flex-grow:1">
+            <div class="mx-3" style="flex-grow:1">
                 {{-- image --}}
                 <div class="form">
                     <div class="container">
@@ -119,23 +139,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        {{-- edit && delete --}}
-        <div class="row w-100 mx-0">
-            {{-- Edit product --}}
-            <div class="col-md-3">
-                <a href="#" class="btn btn-primary w-100 btn-edit">
-                    {{ __('Edit') }}
-                </a>
-            </div>
-            {{-- delte product --}}
-            <div class="col-md-3">
-                <form action="" method="get">
-                    <button type="submit" class="btn btn-primary w-100 del-user">
-                        {{ __('Delete') }}
-                    </button>
-                </form>
             </div>
         </div>
     </div>

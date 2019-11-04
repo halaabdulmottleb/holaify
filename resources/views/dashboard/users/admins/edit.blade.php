@@ -20,6 +20,20 @@
         <form method="POST" action="/auth/admins/{{$admin->name}}" class="w-100 row m-0">
             @csrf
             @method('PATCH')
+            <div class="row w-100 mx-0 justify-content-end">
+                {{-- submit --}}
+                <div class="mx-3">
+                    <button type="submit" class="btn btn-primary w-100">
+                        {{ __('Save') }}
+                    </button>
+                </div>
+                {{-- back --}}
+                <div class="mx-2">
+                    <a href="/auth/admins" class="btn btn-primary w-100 btn-dis">
+                        {{ __('Discard') }}
+                    </a>
+                </div>
+            </div>
             {{-- label --}}
             <div class="col-md-2 p-0">
                 <label class="py-4">Admin Info:</label>
@@ -105,21 +119,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            {{-- btns --}}
-            <div class="form-group row w-100 mx-0 d-flex justify-content-center">
-                {{-- submit --}}
-                <div class="col-md-4 mb-2">
-                    <button type="submit" class="btn btn-primary w-100">
-                        {{ __('Save') }}
-                    </button>
-                </div>
-                {{-- back --}}
-                <div class="col-md-2">
-                    <span class="btn btn-primary w-100 btn-dis">
-                        <a href="/auth/admins"></a> {{ __('Discard') }}
-                    </span>
                 </div>
             </div>
         </form>

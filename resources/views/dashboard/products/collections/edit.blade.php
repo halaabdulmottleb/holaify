@@ -19,7 +19,23 @@
     <form method="POST" action="/auth/collections/{{$collection->id}}" class="w-100 row m-0 justify-content-around">
       @csrf
       @method('PATCH')
-      <div class="mx-3 mt-3 mb-0" style="flex-grow:2">
+      {{-- save --}}
+      <div class="row w-100 mx-0 justify-content-end">
+        {{-- submit --}}
+        <div class="mx-3">
+          <button type="submit" class="btn btn-primary w-100">
+            {{ __('Save') }}
+          </button>
+        </div>
+        {{-- back --}}
+        <div class="mx-2">
+          <a href="/auth/products" class="btn btn-primary w-100 btn-dis">
+            {{ __('Discard') }}
+          </a>
+        </div>
+      </div>
+      {{-- info --}}
+      <div class="mx-3" style="flex-grow:2">
         <div class="form">
           <div class="container">
             {{-- title --}}
@@ -55,7 +71,7 @@
           </div>
         </div>
       </div>
-      <div class="m-3" style="flex-grow:1">
+      <div class="mx-3" style="flex-grow:1">
         <div class="form px-4">
           <label>Collection Image</label>
           <div class="imgs">
@@ -96,21 +112,6 @@
               @enderror
             </div>
           </div>
-        </div>
-      </div>
-      {{-- btns --}}
-      <div class="form-group row w-100 mx-0">
-        {{-- submit --}}
-        <div class="col-md-4 mb-2">
-          <button type="submit" class="btn btn-primary w-100">
-            {{ __('Save') }}
-          </button>
-        </div>
-        {{-- back --}}
-        <div class="col-md-2">
-          <span class="btn btn-primary w-100 btn-dis">
-            <a href="/auth/collections"></a> {{ __('Discard') }}
-          </span>
         </div>
       </div>
     </form>

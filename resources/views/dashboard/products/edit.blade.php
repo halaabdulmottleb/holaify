@@ -20,6 +20,22 @@
         <form method="POST" action="/auth/products/{{$product->id}}" class="w-100 row m-0 justify-content-around">
             @csrf
             @method('PATCH')
+            {{-- save --}}
+            <div class="row w-100 mx-0 justify-content-end">
+                {{-- submit --}}
+                <div class="mx-3">
+                    <button type="submit" class="btn btn-primary w-100">
+                        {{ __('Save') }}
+                    </button>
+                </div>
+                {{-- back --}}
+                <div class="mx-2">
+                    <a href="/auth/products" class="btn btn-primary w-100 btn-dis">
+                        {{ __('Discard') }}
+                    </a>
+                </div>
+            </div>
+            {{-- left-side --}}
             <div class="mx-3 mt-3 mb-0" style="flex-grow:2">
                 {{-- title ,desc. --}}
                 <div class="form">
@@ -184,21 +200,6 @@
                             @enderror
                         </div>
                     </div>
-                </div>
-            </div>
-            {{-- btns --}}
-            <div class="form-group row w-100 mx-0">
-                {{-- submit --}}
-                <div class="col-md-4 mb-2">
-                    <button type="submit" class="btn btn-primary w-100">
-                        {{ __('Save') }}
-                    </button>
-                </div>
-                {{-- back --}}
-                <div class="col-md-2">
-                    <a href="/auth/products" class="btn btn-primary w-100 btn-dis">
-                        {{ __('Discard') }}
-                    </a>
                 </div>
             </div>
         </form>

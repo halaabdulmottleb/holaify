@@ -60,17 +60,26 @@
     <table class="table table-hover" v-else>
       <thead>
         <tr>
-          <th scope="col" width="15">
-            <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" onchange="checkAll(this)" name="selectAll"
-                id="selectAll">
+          <th scope="col" width="15" class="d-flex align-items-center border-0">
+            <div class="custom-control custom-checkbox" style="z-index: 1;" data-toggle="tooltip" data-placement="right"
+              title="Select all Products">
+              <input type="checkbox" class="custom-control-input selected-all" name="selectAll" id="selectAll" @click="selectAll()">
               <label class="custom-control-label" for="selectAll"></label>
             </div>
+            {{-- delete selected --}}
+            <div class="position-absolute pl-5" v-if="select">
+              <form action="" method="GET">
+                  @csrf
+                  <button class="btn btn-primary btn-dis">
+                    {{ __('Delete Selected') }}
+                  </button>
+                </form>
+            </div>
           </th>
-          <th scope="col">Product</th>
+          {{-- <th scope="col">Product</th>
           <th scope="col">Inventory</th>
           <th scope="col">Type</th>
-          <th scope="col">Rate</th>
+          <th scope="col">Rate</th> --}}
         </tr>
       </thead>
       <tbody>
@@ -91,7 +100,7 @@
   {{-- <td>{{$product->rate}}</td> --}}
   <td>
     <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" name="product" value="product-id" id="Product-id">
+      <input type="checkbox" class="custom-control-input" name="product" value="product-id" id="Product-id" @change="selected()">
       <label class="custom-control-label" for="Product-id"></label>
     </div>
   </td>
@@ -113,7 +122,8 @@
   let app = new Vue({  
   el:".content",
   data:{
-    grid:false
+    grid:false,
+    select:false
   },
   methods:{
     Grid(){
@@ -122,23 +132,24 @@
     table(){
       this.grid = false;
     },
+    selectAll(){
+      this.select = !this.select;
+      var checkboxes = $('input[name="product"]');
+      if(this.select){
+        for (let i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = true;
+        }
+      }else{
+        for (let i = 0; i < checkboxes.length; i++) {
+            checkboxes[i].checked = false;
+        }
+      }
+    },
+    selected(){
+      console.log('change');
+        $('.selected-all').prop('indeterminate', true);
+    }
   }
- })
- function checkAll(ele) {
-     var checkboxes = $('input[name="product"]');
-     if (ele.checked) {
-         for (var i = 0; i < checkboxes.length; i++) {
-             if (checkboxes[i].type == 'checkbox') {
-                 checkboxes[i].checked = true;
-             }
-         }
-     } else {
-         for (var i = 0; i < checkboxes.length; i++) {
-             if (checkboxes[i].type == 'checkbox') {
-                 checkboxes[i].checked = false;
-             }
-         }
-     }
- }
+})
 </script>
 @endsection
