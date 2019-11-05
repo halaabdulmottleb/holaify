@@ -1,79 +1,91 @@
 @extends('layouts.dashboard.app')
-@section('title','Home')
+@section('title','Overview')
 @section('content')
 
 <div class="content dash">
     {{-- head --}}
     <div class="head">
-        <div class="img">
-            {{-- img --}}
+        <div class="py-2">
+            {{-- <h3>Welcome,{{Auth::user()->name}}</h3> --}}
+            <h3>Welcome, Mahmoud</h3>
         </div>
-        <div class="p-3">
-            {{-- <h3>Welcome {{Auth::user()->name}} to <span class="brand">Holafiy Dashboard</span></h3> --}}
-            <h3>Welcome Mahmoud to <span class="brand">Holafiy Dashboard</span></h3>
-        </div>
-    </div>
-    {{-- overview --}}
-    <div class="overview row d-flex justify-content-around mx-0 py-3">
-        <div class="img">
-            <img src="/img/dashboard.svg" width="400" alt="activity">
-        </div>
-        <div class="activity">
-            <div class="heading p-3">
-                <h3>Activity :</h3>
-            </div>
-            <div class="body mx-3">
-                <div class="container">
-                    <div class="order">
-                        <div class="float-left">Mahmoud Order Product</div>
-                        <div class="float-right">3min</div>
-                    </div>
-                    <div class="order">
-                        <div class="float-left">Mahmoud Order Product</div>
-                        <div class="float-right">3min</div>
-                    </div>
-                    <div class="order">
-                        <div class="float-left">Mahmoud Order Product</div>
-                        <div class="float-right">3min</div>
-                    </div>
+        <div class="add">
+            <div class="dropdown">
+                <button class="btn btn-primary rounded-full dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Create
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="/auth/collections/create">Collection</a>
+                    <a class="dropdown-item" href="/auth/products/create">Product</a>
+                    <a class="dropdown-item" href="/auth/admins/create">Admin</a>
+                    <a class="dropdown-item" href="/auth/customers/create">Customer</a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="heading p-3">
-        <h3>Overview :</h3>
-    </div>
-    <div class="row justify-around">
-        <div class="div-table">
-            <div class="heading">
-                Total Sale
+    {{-- Content --}}
+    <div class="overview p-5">
+        {{-- overview --}}
+        <div class="row justify-center py-3">
+            <div class="div-table">
+                <div class="heading">
+                    Total Sale
+                </div>
+                <div class="body">
+                    0.00
+                </div>
             </div>
-            <div class="body">
-                EGP 0.00
+            <div class="div-table">
+                <div class="heading">
+                    Total Order
+                </div>
+                <div class="body">
+                    0
+                    {{-- {{$orders->count()}} --}}
+                </div>
+            </div>
+            <div class="div-table">
+                <div class="heading">
+                    Total Customers
+                </div>
+                <div class="body">
+                    0
+                    {{-- {{$customers->count()}} --}}
+                </div>
+            </div>
+            <div class="div-table">
+                <div class="heading">
+                    Total Products
+                </div>
+                <div class="body">
+                    0
+                    {{-- {{$products->count()}} --}}
+                </div>
             </div>
         </div>
-        <div class="div-table">
-            <div class="heading">
-                Total Order
-            </div>
-            <div class="body">
-                0 Orders
-            </div>
-        </div>
-        <div class="div-table">
-            <div class="heading">
-                Total Customers
-            </div>
-            <div class="body">
-                0 Customer
-            </div>
-        </div>
-        <div class="div-table">
-            <div class="heading">
-                Total Products
-            </div>
-            <div class="body">
-                0 Products
+        {{-- activity --}}
+        <div class="row justify-content-around py-3">
+            <div class="top-customer m-1">
+                <div class="heading pb-3">
+                    <h3>Top Customers</h3>
+                </div>
+                <div class="list mx-3">
+                    <ul class="lists mx-2">
+                        <li class="customer">
+                            <div>Mahmoud</div>
+                            <div class="orders">5 Orders</div>
+                        </li>
+                        <li class="customer">
+                            <div>Mahmoud</div>
+                            <div class="orders">100 Orders</div>
+                        </li>
+                        <li class="customer">
+                            <div>Mahmoud</div>
+                            <div class="orders"">500 Orders</div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>

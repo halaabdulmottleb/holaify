@@ -1,5 +1,5 @@
 @extends('layouts.dashboard.app')
-@section('title','Abandoned Orders')
+@section('title','Abandoned Checkouts')
 @section('content')
 <div class="content">
   {{-- header --}}

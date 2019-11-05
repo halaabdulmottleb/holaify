@@ -145,10 +145,10 @@
                             </div>
                             {{-- apartment --}}
                             <div class="form-group row">
-                                <div class="col-md-3 position-relative">
+                                <div class="col-md-4">
                                     <label for="apartment" class="col">{{ __('Apartment') }}</label>
                                     <input id="apartment" type="text"
-                                        class="form-control @error('apartment') is-invalid @enderror" name="apartment"
+                                        class="form-control mb-1 @error('apartment') is-invalid @enderror" name="apartment"
                                         placeholder="Apartment">
                                     @error('apartment')
                                     <span class="invalid-feedback" role="alert">
@@ -160,7 +160,7 @@
                                 <div class="col-md-4">
                                     <label for="city" class="col">{{ __('city') }}</label>
                                     <input id="city" type="text"
-                                        class="form-control @error('city') is-invalid @enderror" name="city"
+                                        class="form-control mb-1 @error('city') is-invalid @enderror" name="city"
                                         placeholder="City">
                                     @error('city')
                                     <span class="invalid-feedback" role="alert">
@@ -169,10 +169,10 @@
                                     @enderror
                                 </div>
                                 {{-- country --}}
-                                <div class="col-md-5">
+                                <div class="col-md-4">
                                     <label for="country" class="col">{{ __('country') }}</label>
                                     <input id="country" type="text"
-                                        class="form-control @error('country') is-invalid @enderror" name="country"
+                                        class="form-control mb-1 @error('country') is-invalid @enderror" name="country"
                                         placeholder="Country">
 
                                     @error('country')

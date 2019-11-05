@@ -46,7 +46,8 @@
             <div class="nav-item">
               {{-- cart --}}
               <a class="nav-link" href="/cart" v-pre>
-                <i class="lni-cart"></i>
+                {{-- <i class="lni-cart"></i> --}}
+                <img src="/img/cart.svg" alt="cart" width="25">
               </a>
             </div>
             <li class="nav-item dropdown">

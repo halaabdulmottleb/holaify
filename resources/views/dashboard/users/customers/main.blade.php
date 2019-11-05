@@ -49,6 +49,7 @@
         </div>
       </div>
       <div class="grid">
+          <span class="mr-1">View :</span>
         <i class="fas fa-th-list" :class="{'active' : !grid}" @click="table()" data-toggle="tooltip"
           data-placement="bottom" title="List"></i>
         <i class="fas fa-th-large" :class="{'active' : grid }" @click="Grid()" data-toggle="tooltip"
@@ -57,7 +58,7 @@
     </div>
     {{-- grid --}}
     <div class="row mx-0 my-2 justify-around" v-if="grid == true">
-      {{-- @foreach($admin as admin) --}}
+      {{-- @foreach($customers as $customer) --}}
       <div class="p-0 div-table bg-white m-4">
         <div class="bg-white rounded-lg p-4">
           <img class="h-16 w-16 md:h-24 md:w-24 rounded-full mx-auto" src="/img/default-user.svg">

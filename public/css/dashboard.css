@@ -201,76 +201,84 @@ body {
 
 .dash .head {
     display: flex;
-    flex-direction: column;
-}
-
-.dash .head .img {
-    height: 200px;
-    background-image: url('../img/dash.png');
-    background-position: center;
-    background-size: cover;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
 .dash .head h3 {
     font-size: 35px;
+    font-weight: 800;
 }
 
-.dash .head h3 span {
-    display: block;
-    font-family: 'Righteous', cursive;
-    font-size: 40px;
-    text-indent: 40px;
-}
-.dash .overview .activity{
+.dash .overview .activity {
     flex-grow: 2;
 
 }
-.dash .overview .heading {
-    color: #222b3a;
-    font-size: 1.2rem;
-}
-.dash .overview .body{
-    background:linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-    padding: 1rem .5rem;
-    box-shadow: 0 0 5px #9f9f9fc2;
-    border-radius: 5px;
-}
-.dash .overview .order {
-    overflow: auto;
-    padding: 1rem;
-    background: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-    margin: 3px;
-    transition: 500ms ease;
-}
 
-.dash .overview .order:hover {
-    transform: scale(0.95);
-    /* box-shadow: 0 0 5px #cacaca; */
-    border-radius: 5px;
-    background-image: linear-gradient(to right, #f78ca0 0%, #f9748f 19%, #fd868c 60%, #fe9a8b 100%);
-}
-
-.dash .div-table {
+.dash .overview .div-table {
     padding: 1rem;
-    background: #8080802e;
+    background: #fffffffa;
     transition: 500ms ease-in-out;
     margin: .3rem;
+    border-radius: 5px;
+    min-width: 210px;
+    box-shadow: 0 0 5px #d0d0d0;
 }
 
 .dash .div-table:hover {
-    box-shadow: 0 0 5px #cfcfcfba;
+    box-shadow: 0 0 7px #cfcfcfba;
     transform: scale(1.03);
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-image: linear-gradient(135deg, #667eea 0%, #3F51B5 100%);
+    color: white;
 }
 
 .dash .div-table .heading {
     font-size: 1.2rem;
-    padding: 1rem 0.5rem;
+    font-weight: 800;
 }
 
 .dash .div-table .body {
-    font-size: 2rem;
-    padding: 1rem;
+    font-size: 1.5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.dash .top-customer,
+.dash .activity {
+    padding: 2rem;
+    background: white;
+    box-shadow: 0 0 5px #c7c7c7;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+.dash .top-customer .heading,
+.dash .activity .heading {
+    font-size: 1.3rem;
+    font-weight: 800;
+}
+
+.dash .top-customer .lists {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.dash .top-customer .lists .customer {
+    display: flex;
+    justify-content: space-between;
+    padding: .3rem;
+}
+
+.dash .top-customer .lists .customer .orders {
+    padding: 0.1rem 1rem;
+    background: linear-gradient(135deg, #667eea 0%, #3F51B5 100%);
+    color: white;
+    border-radius: 50px;
+    font-size: small;
 }
 
 /* table */
@@ -279,9 +287,15 @@ body {
     display: flex;
     justify-content: space-between;
 }
-.search .grid{
+
+.search .grid {
     display: flex;
+    align-items: center;
     margin: 0 10px;
+}
+.search .grid span{
+    color: #222b3a;
+    font-size: small;
 }
 .search .grid i {
     color: #3f4253;
@@ -381,8 +395,7 @@ table {
 
 .btn-primary {
     border: 0;
-    /* background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
-    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    background: linear-gradient(135deg, #667eea 0%, #3F51B5 100%);
     padding: 8px 15px;
     transition: 500ms ease;
 }
@@ -391,16 +404,20 @@ table {
     box-shadow: 0 0 7px #29323c;
     transform: scale(0.9);
 }
-.btn-edit{
+
+.btn-edit {
     background: linear-gradient(135deg, #27e156 0%, #16991a 100%);
     margin-bottom: 5px;
 }
-.btn-edit:hover{
+
+.btn-edit:hover {
     box-shadow: 0 0 7px #66ea7c;
 }
+
 .btn-dis {
     background: white;
     color: #1c3053;
+    cursor: pointer;
 }
 
 .btn-dis:hover {
@@ -434,6 +451,6 @@ label {
     color: #474747;
 }
 
-input.amsify-suggestags-input{
-    width:90px !important;
+input.amsify-suggestags-input {
+    width: 90px !important;
 }
