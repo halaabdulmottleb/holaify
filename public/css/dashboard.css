@@ -70,7 +70,7 @@ body {
     height: 100%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     #navbarSupportedContent2 {
         transition: 500ms ease;
         z-index: 1;
