@@ -3,17 +3,17 @@
 @section('content')
 <div class="content">
   {{-- header --}}
-  <div class="header p-2">
-    <div class="head">
-      <h3>Products</h3>
-    </div>
-    {{-- add product --}}
-    <div class="add">
-      <a class="btn btn-primary" href="/auth/products/create">
-        Add Product
-      </a>
-    </div>
-  </div>
+  @component('componants.dashHeading')
+  @slot('title')
+  Products
+  @endslot
+  @slot('link')
+  /auth/products/create
+  @endslot
+  @slot('Add')
+  Add Products
+  @endslot
+  @endcomponent
   {{-- content --}}
   <div class="main p-3">
     {{-- session message --}}
@@ -145,10 +145,10 @@
     <td>Mobile</td>
     <td>3/5</td>
   </tr>
-{{-- @endforeach --}}
-</tbody>
-</table>
-{{-- @endif --}}
+  {{-- @endforeach --}}
+  </tbody>
+  </table>
+  {{-- @endif --}}
 </div>
 </div>
 @endsection

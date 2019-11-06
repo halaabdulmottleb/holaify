@@ -3,17 +3,11 @@
 @section('content')
 <div class="content">
   {{-- header --}}
-  <div class="header p-2">
-    <div class="head">
-      <h3>Orders</h3>
-    </div>
-    {{-- add order --}}
-    {{-- <div class="add">
-      <a class="btn btn-primary" href="{{route('create_admin')}}">
-    Add Order
-    </a>
-  </div> --}}
-</div>
+  @component('componants.dashHeading')
+  @slot('title')
+  Orders
+  @endslot
+  @endcomponent
 {{-- content --}}
 <div class="main p-3">
   {{-- session message --}}

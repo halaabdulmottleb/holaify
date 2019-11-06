@@ -21,8 +21,11 @@ body {
     font-family: 'Righteous', cursive;
     display: flex;
     transition: 500ms ease;
+    align-items: center;
 }
-
+.navbar .navbar-brand span{
+    font-size: medium;
+}
 .navbar-brand:hover {
     color: white;
     transform: translate(10px)

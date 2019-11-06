@@ -3,17 +3,17 @@
 @section('content')
 <div class="content">
   {{-- header --}}
-  <div class="header p-2">
-    <div class="head">
-      <h3>Admins</h3>
-    </div>
-    {{-- add admins --}}
-    <div class="add">
-      <a class="btn btn-primary" href="/auth/admins/create">
-        Add Admin
-      </a>
-    </div>
-  </div>
+  @component('componants.dashHeading')
+  @slot('title')
+  Admins
+  @endslot
+  @slot('link')
+  /auth/admins/create
+  @endslot
+  @slot('Add')
+  Add Admin
+  @endslot
+  @endcomponent
   {{-- content --}}
   <div class="main p-3">
     {{-- session message --}}

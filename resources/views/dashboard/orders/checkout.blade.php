@@ -3,11 +3,11 @@
 @section('content')
 <div class="content">
   {{-- header --}}
-  <div class="header p-2">
-    <div class="head">
-      <h3>Abandoned Checkouts</h3>
-    </div>
-  </div>
+  @component('componants.dashHeading')
+  @slot('title')
+  Abandoned Checkouts
+  @endslot
+  @endcomponent
   {{-- content --}}
   <div class="main p-3">
     {{-- session message --}}
