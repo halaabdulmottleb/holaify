@@ -18,19 +18,9 @@
   <div class="main p-3">
     {{-- session message --}}
     @if (session('message'))
-    <div class="text-center session">
-      <div class="p-2 bg-indigo-800 items-center text-indigo-100 leading-none lg:rounded-full flex lg:inline-flex"
-        role="alert">
-        <span class="flex rounded-full bg-indigo-500 uppercase px-2 py-1 text-xs font-bold mr-3">New</span>
-        <span class="font-semibold mr-2 text-left flex-auto">{{ session('message')}}</span>
-        <svg class="fill-current h-6 w-6 text-red-500" role="button" xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 20 20" style="color:white" @click="closeSession()">
-          <title>Close</title>
-          <path
-            d="M14.348 14.849a1.2 1.2 0 0 1-1.697 0L10 11.819l-2.651 3.029a1.2 1.2 0 1 1-1.697-1.697l2.758-3.15-2.759-3.152a1.2 1.2 0 1 1 1.697-1.697L10 8.183l2.651-3.031a1.2 1.2 0 1 1 1.697 1.697l-2.758 3.152 2.758 3.15a1.2 1.2 0 0 1 0 1.698z" />
-        </svg>
-      </div>
-    </div>
+    @component('componants.session')
+    {{session('message')}}
+    @endcomponent
     @endif
     {{-- @if(!$customers->count()) --}}
     {{-- <div class="not-yet">
@@ -48,7 +38,7 @@
         </div>
       </div>
       <div class="grid">
-          <span class="mr-1">View :</span>
+        <span class="mr-1">View :</span>
         <i class="fas fa-th-list" :class="{'active' : !grid}" @click="view()" data-toggle="tooltip"
           data-placement="bottom" title="List"></i>
         <i class="fas fa-th-large" :class="{'active' : grid }" @click="view()" data-toggle="tooltip"
@@ -79,7 +69,7 @@
         <tr>
           <th scope="col" width="15">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input"  @click="selectAll()" name="selectAll" id="SelectAll">
+              <input type="checkbox" class="custom-control-input" @click="selectAll()" name="selectAll" id="SelectAll">
               <label class="custom-control-label" for="SelectAll"></label>
             </div>
           </th>
@@ -94,33 +84,34 @@
         <tr>
           {{-- <td scope="col">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" name="customer" value="{{$customer->id}}" id="{{customer->id}}" @change="selected()">
-              <label class="custom-control-label" for="{{$customer->id}}"></label>
-            </div>
-          </td>
-            <td><a href="/auth/customers/{{$customer->id]}"><img src="{{$customer->img}}" class="img-thumbnail d-none
-          d-md-inline-block" width="35"
-          style="margin-right:8px">{{$customer->name}}</a></td>
-          <td>{{$customer->Country}}</td>
-          <td>{{$customer->orders}}</td>
-          <td>{{$customer->spent}}</td> --}}
-          <td scope="col">
-              <div class="custom-control custom-checkbox">
-                  <input type="checkbox" class="custom-control-input" name="customer" @change="selected()" value="customerID" id="selectAll">
-                  <label class="custom-control-label" for="selectAll"></label>
-                </div>
-          </td>
-          <td><a href="#"><img src="/img/default-user.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
-                style="margin-right:8px">Mark</a></td>
-          <td>Egypt</td>
-          <td>0 Orders</td>
-          <td>LE 0.00 spent</td>
-        </tr>
-        {{-- @endforeach --}}
-      </tbody>
-    </table>
-    {{-- @endif --}}
+              <input type="checkbox" class="custom-control-input" name="customer" value="{{$customer->id}}"
+          id="{{customer->id}}" @change="selected()">
+          <label class="custom-control-label" for="{{$customer->id}}"></label>
   </div>
+  </td>
+  <td><a href="/auth/customers/{{$customer->id]}"><img src="{{$customer->img}}" class="img-thumbnail d-none
+          d-md-inline-block" width="35" style="margin-right:8px">{{$customer->name}}</a></td>
+  <td>{{$customer->Country}}</td>
+  <td>{{$customer->orders}}</td>
+  <td>{{$customer->spent}}</td> --}}
+  <td scope="col">
+    <div class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" name="customer" @change="selected()" value="customerID"
+        id="selectAll">
+      <label class="custom-control-label" for="selectAll"></label>
+    </div>
+  </td>
+  <td><a href="#"><img src="/img/default-user.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
+        style="margin-right:8px">Mark</a></td>
+  <td>Egypt</td>
+  <td>0 Orders</td>
+  <td>LE 0.00 spent</td>
+  </tr>
+  {{-- @endforeach --}}
+  </tbody>
+  </table>
+  {{-- @endif --}}
+</div>
 </div>
 @endsection
 @section('script')
