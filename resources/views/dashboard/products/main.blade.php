@@ -47,16 +47,17 @@
             placeholder="Search for Products">
         </div>
       </div>
+      {{-- grid --}}
       <div class="grid">
         <span class="mr-1">View :</span>
-        <i class="fas fa-th-list" :class="{'active' : !grid}" @click="table()" data-toggle="tooltip"
+        <i class="fas fa-th-list" :class="{'active' : !grid}" @click="view()" data-toggle="tooltip"
           data-placement="bottom" title="List"></i>
-        <i class="fas fa-th-large" :class="{'active' : grid }" @click="Grid()" data-toggle="tooltip"
+        <i class="fas fa-th-large" :class="{'active' : grid }" @click="view()" data-toggle="tooltip"
           data-placement="bottom" title="Grid"></i>
       </div>
     </div>
     {{-- grid --}}
-    <div class="row mx-0 my-2 justify-around" v-if="grid == true">
+    <div class="row mx-0 my-2 justify-around" v-if="grid">
       {{-- @foreach($products as $product) --}}
       <div class="p-0 div-table bg-white m-2">
         <div class="bg-white rounded-lg p-4">
@@ -85,7 +86,7 @@
               <label class="custom-control-label" for="selectAll"></label>
             </div>
             {{-- delete selected --}}
-            <div class="position-absolute pl-5" v-if="select">
+            <div class="position-absolute pl-5" v-if="selectedAll">
               <form action="" method="GET">
                 @csrf
                 <button class="btn btn-primary btn-dis">
@@ -107,7 +108,7 @@
             <td>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input" name="product" value="{{$product->id}}"
-          id="{{$product->id}}">
+          id="{{$product->id}}" @change="selected()">
           <label class="custom-control-label" for="{{$product->id}}"></label>
   </div>
   </td>
@@ -129,10 +130,25 @@
   <td>Mobile</td>
   <td>3/5</td>
   </tr>
-  {{-- @endforeach --}}
-  </tbody>
-  </table>
-  {{-- @endif --}}
+  {{-- sdasda/ --}}
+  <tr>
+    <td>
+      <div class="custom-control custom-checkbox">
+        <input type="checkbox" class="custom-control-input" name="product" value="product-id" id="Product-id2"
+          @change="selected()">
+        <label class="custom-control-label" for="Product-id2"></label>
+      </div>
+    </td>
+    <td><a href="#"><img src="/img/default-product.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
+          style="margin-right:8px">Iphone</a></td>
+    <td>5 in stock</td>
+    <td>Mobile</td>
+    <td>3/5</td>
+  </tr>
+{{-- @endforeach --}}
+</tbody>
+</table>
+{{-- @endif --}}
 </div>
 </div>
 @endsection
@@ -142,31 +158,36 @@
   el:".content",
   data:{
     grid:false,
-    select:false
+    selectedAll:false,
+    anySelect:false
   },
   methods:{
-    Grid(){
-      this.grid = true;
-    },
-    table(){
-      this.grid = false;
+    // grid view
+    view(){
+      this.grid = !this.grid;
     },
     selectAll(){
-      this.select = !this.select;
-      var checkboxes = $('input[name="product"]');
-      if(this.select){
-        for (let i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].checked = true;
-        }
+      this.selectedAll = !this.selectedAll;
+      if(this.selectedAll){
+        // select All
+        $('input[name="product"]').prop('checked',true);
       }else{
-        for (let i = 0; i < checkboxes.length; i++) {
-            checkboxes[i].checked = false;
-        }
+        // diselect All
+        $('input[name="product"]').prop('checked',false);        
       }
     },
     selected(){
-      console.log('change');
-        $('.selected-all').prop('indeterminate', true);
+      if($('input[name="product"]:not(:checked)').length == 0){ 
+        // all are checked
+        this.selectedAll = true;
+        $('input[name="selectAll"]').prop('checked', true);
+        $('input[name="selectAll"]').prop('indeterminate', false);
+      }else{
+        // some checkbox checked
+        this.selectedAll = false;
+        $('input[name="selectAll"]').prop('indeterminate', true);
+        $('input[name="selectAll"]').prop('checked', false);
+      }
     },
     closeSession(){
       $('.session').remove();

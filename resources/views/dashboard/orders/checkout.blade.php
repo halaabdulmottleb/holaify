@@ -48,7 +48,7 @@
         <tr>
           <th scope="col" width="15">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" name="SelectAll" id="SelectAll">
+              <input type="checkbox" class="custom-control-input" @click="selectAll()" name="SelectAll" id="SelectAll">
               <label class="custom-control-label" for="SelectAll"></label>
             </div>
           </th>
@@ -70,7 +70,7 @@
   <td>{{$checkout->order->title}}</td> --}}
   <td>
     <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" name="" id="">
+      <input type="checkbox" class="custom-control-input" @change="selected()" name="aband" id="">
       <label class="custom-control-label" for=""></label>
     </div>
   </td>
@@ -90,12 +90,37 @@
   let app = new Vue({  
   el:".content",
   data:{
+    selectedAll:false,
+    anySelect:false
   },
   methods:{
+    selectAll(){
+      this.selectedAll = !this.selectedAll;
+      if(this.selectedAll){
+        // select All
+        $('input[name="aband"]').prop('checked',true);
+      }else{
+        // diselect All
+        $('input[name="aband"]').prop('checked',false);        
+      }
+    },
+    selected(){
+      if($('input[name="aband"]:not(:checked)').length == 0){ 
+        // all are checked
+        this.selectedAll = true;
+        $('input[name="selectAll"]').prop('checked', true);
+        $('input[name="selectAll"]').prop('indeterminate', false);
+      }else{
+        // some checkbox checked
+        this.selectedAll = false;
+        $('input[name="selectAll"]').prop('indeterminate', true);
+        $('input[name="selectAll"]').prop('checked', false);
+      }
+    },
     closeSession(){
       $('.session').remove();
     }
   }
- })
+})
 </script>
 @endsection

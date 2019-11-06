@@ -49,14 +49,14 @@
       </div>
       <div class="grid">
         <span class="mr-1">View :</span>
-        <i class="fas fa-th-list" :class="{'active' : !grid}" @click="table()" data-toggle="tooltip"
+        <i class="fas fa-th-list" :class="{'active' : !grid}" @click="view()" data-toggle="tooltip"
           data-placement="bottom" title="List"></i>
-        <i class="fas fa-th-large" :class="{'active' : grid }" @click="Grid()" data-toggle="tooltip"
+        <i class="fas fa-th-large" :class="{'active' : grid }" @click="view()" data-toggle="tooltip"
           data-placement="bottom" title="Grid"></i>
       </div>
     </div>
     {{-- grid --}}
-    <div class="row mx-0 my-2 justify-around" v-if="grid == true">
+    <div class="row mx-0 my-2 justify-around" v-if="grid">
       {{-- @foreach($admin as $admin) --}}
       <div class="p-0 div-table bg-white m-2">
         <div class="bg-white rounded-lg p-4">
@@ -78,7 +78,7 @@
         <tr>
           <th scope="col" width="15">
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" onchange="checkAll(this)" name="selectAll"
+              <input type="checkbox" class="custom-control-input" @click="selectAll()" name="selectAll"
                 id="selectAll">
               <label class="custom-control-label" for="selectAll"></label>
             </div>
@@ -95,7 +95,7 @@
             <td>
             <div class="custom-control custom-checkbox">
               <input type="checkbox" class="custom-control-input" name="admin" value="{{$admin->id}}"
-          id="{{$admin->id}}">
+          id="{{$admin->id}}" @change="selected()">
           <label class="custom-control-label" for="{{$admin->id}}"></label>
   </div>
   </td>
@@ -105,7 +105,7 @@
   <td>{{$admin->number}}</td> --}}
   <td>
     <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" name="admin" value="adminID" id="adminID">
+      <input type="checkbox" class="custom-control-input" name="admin" @change="selected()" value="adminID" id="adminID">
       <label class="custom-control-label" for="adminID"></label>
     </div>
   </td>
@@ -126,35 +126,42 @@
   let app = new Vue({  
   el:".content",
   data:{
-    grid:false
+    grid:false,
+    selectedAll:false,
+    anySelect:false
   },
   methods:{
-    Grid(){
-      this.grid = true;
+    // grid view
+    view(){
+      this.grid = !this.grid;
     },
-    table(){
-      this.grid = false;
+    selectAll(){
+      this.selectedAll = !this.selectedAll;
+      if(this.selectedAll){
+        // select All
+        $('input[name="admin"]').prop('checked',true);
+      }else{
+        // diselect All
+        $('input[name="admin"]').prop('checked',false);        
+      }
+    },
+    selected(){
+      if($('input[name="admin"]:not(:checked)').length == 0){ 
+        // all are checked
+        this.selectedAll = true;
+        $('input[name="selectAll"]').prop('checked', true);
+        $('input[name="selectAll"]').prop('indeterminate', false);
+      }else{
+        // some checkbox checked
+        this.selectedAll = false;
+        $('input[name="selectAll"]').prop('indeterminate', true);
+        $('input[name="selectAll"]').prop('checked', false);
+      }
     },
     closeSession(){
       $('.session').remove();
     }
   }
- })
- function checkAll(ele) {
-     var checkboxes = $('input[name="product"]');
-     if (ele.checked) {
-         for (var i = 0; i < checkboxes.length; i++) {
-             if (checkboxes[i].type == 'checkbox') {
-                 checkboxes[i].checked = true;
-             }
-         }
-     } else {
-         for (var i = 0; i < checkboxes.length; i++) {
-             if (checkboxes[i].type == 'checkbox') {
-                 checkboxes[i].checked = false;
-             }
-         }
-     }
- }
+})
 </script>
 @endsection
