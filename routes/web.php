@@ -7,6 +7,9 @@ Route::get('/', function () {
 Route::get('/cart', function () {
     return view('main.cart');    
 });
+Route::get('/product', function () {
+    return view('main.product');    
+});
 //product
 // Route::get('/{collection}/{product}', function () {
 //     return view('main.product');

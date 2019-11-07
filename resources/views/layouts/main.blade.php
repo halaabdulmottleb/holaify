@@ -72,7 +72,7 @@
               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                 {{-- profile --}}
                 <a class="dropdown-item" href="/auth">
-                  <i class="far fa-user pr-2"></i> {{ __('Dashboard') }}
+                  <i class="lni-pulse pr-2"></i> {{ __('Dashboard') }}
                 </a>
                 {{-- profile --}}
                 <a class="dropdown-item" href="#">
