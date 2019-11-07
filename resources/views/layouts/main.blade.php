@@ -22,12 +22,12 @@
 <body>
   <div id="app">
     {{-- navbar --}}
-    <nav class="navbar navbar-expand-md shadow-sm">
-      <div class="container">
+    <nav class="navbar navbar-expand-md shadow-sm py-1">
+      <div class="container-fluid">
         {{-- nav brand --}}
         <a class="navbar-brand" href="{{ url('/') }}">
-          <img src="/img/brand.svg" width="30" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s"
-            alt="brand-img">
+          {{-- <img src="/img/brand.svg" width="30" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s"
+            alt="brand-img"> --}}
           <span class="wow fadeInLeft" data-wow-duration="1s"
             data-wow-delay="1s">{{ config('app.name', 'Holaify') }}</span>
         </a>
@@ -39,14 +39,29 @@
           <!-- Right Side Of Navbar -->
           <ul class="navbar-nav ml-auto">
             <!-- Authentication Links -->
-            @guest
-            <div class="nav-item">
-              {{-- cart --}}
+            {{-- cart --}}
+            <li class="nav-item cart">
               <a class="nav-link" href="/cart" v-pre>
-                {{-- <i class="lni-cart"></i> --}}
-                <img src="/img/cart.svg" alt="cart" width="25">
+                <i class="lni-cart"></i>
               </a>
-            </div>
+            </li>
+            @guest
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+            </li>
+            @if (Route::has('register'))
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+            </li>
+            @endif
+            @else
+            {{-- @guest --}}
+            {{-- <div class="nav-item"> --}}
+              {{-- cart --}}
+              {{-- <a class="nav-link" href="/cart" v-pre>
+                <i class="lni-cart"></i>
+              </a> --}}
+            {{-- </div> --}}
             <li class="nav-item dropdown">
               <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false" v-pre>
