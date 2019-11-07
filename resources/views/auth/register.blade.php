@@ -11,7 +11,7 @@
                         <div class="header d-flex py-5 px-4">
                             <img src="/img/brand.svg" width="40" class="wow fadeIn" data-wow-duration="2s"
                                 data-wow-delay="0s" alt="brand-img">
-                            <h1 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">Holaify</h1>
+                            <h1 class="wow fadeInLeft mb-0" data-wow-duration="1s" data-wow-delay="1s">Holaify</h1>
                         </div>
                         <img src="/img/log.svg" alt="register-img" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s">
                     </div>

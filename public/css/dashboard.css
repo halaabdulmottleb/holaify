@@ -25,12 +25,17 @@ body {
 }
 .navbar .navbar-brand span{
     font-size: medium;
+    color: white;
+
 }
 .navbar-brand:hover {
     color: white;
     transform: translate(10px)
 }
 
+.navbar .nav-link{
+    color: #DFDBE5;
+}
 .navbar .nav-link:hover {
     color: #DFDBE5;
 }
@@ -145,6 +150,7 @@ body {
 
 .nav .nav-item .dropdown-ul .li a {
     padding: 5px;
+    color:#222b3a
 }
 
 .nav .nav-item .dropdown-ul .li a:hover {
@@ -176,7 +182,9 @@ body {
 .content .header .add {
     float: right;
 }
-
+.content .header .add a{
+    color: #222B3A;
+}
 .content .main .not-yet {
     display: flex;
     justify-content: center;
@@ -398,6 +406,7 @@ table {
 
 .btn-primary {
     border: 0;
+    color: white !important;
     background: linear-gradient(135deg, #667eea 0%, #3F51B5 100%);
     padding: 8px 15px;
     transition: 500ms ease;

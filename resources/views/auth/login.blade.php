@@ -11,7 +11,7 @@
                         <div class="header d-flex py-5 px-4">
                             <img src="/img/brand.svg" width="40" class="wow fadeIn" data-wow-duration="2s"
                                 data-wow-delay="0s" alt="brand-img">
-                            <h1 class="wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">Holaify</h1>
+                            <h1 class="wow fadeInLeft mb-0" data-wow-duration="1s" data-wow-delay="1s">Holaify</h1>
                         </div>
                         <img src="/img/log.svg" alt="login-img" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s">
                     </div>
@@ -48,10 +48,10 @@
                                             <label for="email">Email Address :</label>
                                             <input id="email" type="email"
                                                 class="form-control @error('email') is-invalid @enderror" name="email"
-                                                placeholder="admin@admin.com" required autocomplete="email" autofocus>
+                                                placeholder="email" required autocomplete="email" autofocus>
                                             {{-- email error --}}
                                             @error('email')
-                                            <span class="invalid-feedback" role="alert">
+                                            <span class="text-danger text-xs" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                             @enderror
@@ -63,10 +63,10 @@
                                             <label for="passwor">Password:</label>
                                             <input id="password" type="password"
                                                 class="form-control @error('password') is-invalid @enderror"
-                                                placeholder="*********" name="password" autocomplete="none">
+                                                placeholder="password" name="password" autocomplete="none">
                                             {{-- password error --}}
                                             @error('password')
-                                            <span class="invalid-feedback" role="alert">
+                                            <span class="text-danger text-xs" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
                                             @enderror
