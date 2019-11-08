@@ -10,6 +10,9 @@ Route::get('/cart', function () {
 Route::get('/product', function () {
     return view('main.product');    
 });
+Route::get('/profile', function () {
+    return view('main.profile');    
+});
 //product
 // Route::get('/{collection}/{product}', function () {
 //     return view('main.product');

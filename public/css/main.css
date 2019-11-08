@@ -126,11 +126,62 @@ li.nav-item::after {
 .navbar .nav-item .nav-link {
     padding: 4px 8px;
 }
-
+.navbar .nav-item .nav-link .num{
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    background: #fe494c;
+    color: white;
+    font-size: 10px;
+    padding: 1px 5px;
+    border-radius: 15px;
+}
 .navbar .nav-item:hover .nav-link {
     color: #fe494c;
 }
-
+.navbar .navbar-nav{
+    display: flex;
+    flex-direction: row;
+}
+.searchModel .modal-content{
+    border-radius: 11px;
+    border: 0;
+    box-shadow: 0 0 5px #f7f7f7;
+}
+.searchModel .modal-header{
+    border: 0;
+}
+.searchModel .modal-header .form-inline i{
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    color: #6b6b6b;
+}
+.searchModel .modal-header .form-control{
+    background: #e8e8e8;
+    border: 0;
+    border-radius: 10px;
+    padding-left: 2rem;
+    font-weight: 600;    
+}
+.searchModel .modal-header .form-control:focus{
+    box-shadow: none;
+}
+.searchModel .modal-header .btn{
+    color: #6b6b6b;
+    font-weight: 600;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    border-radius: 10px;
+    transition: 500ms ease;
+}
+.searchModel .modal-header .btn:hover{
+    background: #fe494c;
+    color: white;
+    transform: scale(0.99);
+    box-shadow: none;
+}
 /* .navbar-expand-md .navbar-nav .dropdown-menu {
   border: 0;
   box-shadow: 0 0 8px #8080809e;

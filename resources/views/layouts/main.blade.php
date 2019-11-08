@@ -26,8 +26,6 @@
       <div class="container-fluid">
         {{-- nav brand --}}
         <a class="navbar-brand" href="{{ url('/') }}">
-          {{-- <img src="/img/brand.svg" width="30" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s"
-            alt="brand-img"> --}}
           <span class="wow fadeInLeft" data-wow-duration="1s"
             data-wow-delay="1s">{{ config('app.name', 'Holaify') }}</span>
         </a>
@@ -39,10 +37,35 @@
           <!-- Right Side Of Navbar -->
           <ul class="navbar-nav ml-auto wow fadeInDown" data-wow-duration="2s" data-wow-delay="0s">
             <!-- Authentication Links -->
+            <li class="nav-item">
+              <a class="nav-link" href="#" data-toggle="modal" data-target="#searchModel" v-pre>
+                <i class="fas fa-search"></i>
+              </a>
+              {{-- search model --}}
+              <div class="modal fade searchModel" id="searchModel" tabindex="-1" role="dialog"
+                aria-labelledby="searchModel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <form class="form-inline position-relative w-100 mr-2">
+                        <i class="fas fa-search"></i>
+                        <input class="form-control mr-sm-2 w-100" type="search" placeholder="Search"
+                          aria-label="Search">
+                      </form>
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    </div>
+                    <div class="modal-body">
+                      ...
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
             {{-- cart --}}
             <li class="nav-item cart">
-              <a class="nav-link" href="/cart" v-pre>
+              <a class="nav-link position-relative" href="/cart" v-pre>
                 <i class="lni-cart"></i>
+                <span class="num">0</span>
               </a>
             </li>
             @guest
@@ -57,8 +80,8 @@
             @else
             {{-- @guest --}}
             {{-- <div class="nav-item"> --}}
-              {{-- cart --}}
-              {{-- <a class="nav-link" href="/cart" v-pre>
+            {{-- cart --}}
+            {{-- <a class="nav-link" href="/cart" v-pre>
                 <i class="lni-cart"></i>
               </a> --}}
             {{-- </div> --}}
