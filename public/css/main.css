@@ -173,3 +173,167 @@ li.nav-item::after {
     text-align: center;
     font-weight: 600;
 }
+
+/* product  */
+.product-div {
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    /* height: 450px; */
+    flex-wrap: wrap;
+    padding: 1rem;
+}
+
+.product-div div {
+    height: max-content;
+}
+
+.product-div .product-img,
+.product-div .product-info,
+.product-div .product-reviews,
+.product-div .product-similar {
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 0 5px #e6e6e6;
+}
+
+.product-div .product-img {
+    flex-grow: 1;
+    padding: .5rem;
+}
+
+.product-div .product-img img {
+    max-height: 330px;
+}
+
+.product-div .product-info {
+    flex-grow: 2;
+    color: #222B3A;
+}
+
+.product-div .product-info .info .product-title {
+    font-size: calc(1vw + 15px);
+}
+
+.product-div .product-info .info .product-price,
+.product-div .product-reviews .heading {
+    font-weight: 600;
+    font-size: calc(1vw + 10px);
+}
+
+.product-div .product-info .info .product-des .header,
+.product-div .product-info .info .product-type .header,
+.product-div .product-info .info .product-tags .header,
+.product-div .product-reviews .review .yours .total,
+.product-div .product-similar .heading,
+.product-div .product-reviews .review .others .div .left .name {
+    font-weight: 700;
+    font-size: calc(0vw + 15px);
+    padding: 2px;
+}
+
+.product-div .product-info .info .product-tags .tag {
+    font-size: small;
+    background: #fe494c;
+    color: white;
+    padding: 0.3rem 1rem;
+    border-radius: 20px;
+    margin: 3px;
+    transition: 500ms ease;
+}
+
+.product-div .product-info .info .product-tags .tag:hover {
+    transform: scale(1.09);
+}
+
+.product-div .product-info .info .product-tags .tag:hover a {
+    color: white;
+    text-decoration: none;
+}
+
+.product-div .product-info .info .add-to-cart .btn {
+    padding: .5rem 2rem;
+    background: white;
+    border-color: #fe494c;
+    color: #fe494c;
+    border-radius: 50px;
+    transition: 500ms ease;
+}
+
+.product-div .product-info .info .add-to-cart .btn:hover {
+    background: #fe494c;
+    color: white;
+    transform: scale(0.95);
+}
+
+.product-div .product-reviews {
+    flex-grow: 2;
+}
+
+.product-div .product-reviews .review .yours label {
+    font-size: 2rem;
+}
+
+.product-div .product-reviews .review .yours label:checked {
+    color: yellow;
+}
+
+.product-div .product-reviews .review .others .div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transition: 500ms ease;
+    padding: .5rem;
+    margin: .3rem;
+    border: 1px solid #dadada;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+}
+
+.product-div .product-reviews .review .others .div:hover {
+    box-shadow: 0 0 5px #cccccc;
+    background: #dadada;
+    transform: scale(0.95);
+}
+
+.product-div .product-reviews .review .others .div .left .rate {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.product-div .product-reviews .review .others .div .left .rate label{
+ margin: 0;
+  font-size: smaller;
+}
+.product-div .product-reviews .review .others .div .right span{
+  font-size: smaller;
+  font-weight: 600;
+  padding: .5rem;
+}
+.product-div .product-similar {
+    /* flex-grow: 1; */
+}
+
+.product-div .product-similar .items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem;
+}
+
+.product-div .product-similar .items li {
+    margin: 2px;
+    transition: 500ms ease;
+}
+
+.product-div .product-similar .items li:hover {
+    transform: scale(1.02);
+}
+
+.product-div .product-similar .items li .price {
+    font-size: smaller;
+    padding: 4px;
+}

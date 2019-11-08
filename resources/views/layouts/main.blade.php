@@ -37,7 +37,7 @@
           <ul class="navbar-nav mr-auto">
           </ul>
           <!-- Right Side Of Navbar -->
-          <ul class="navbar-nav ml-auto">
+          <ul class="navbar-nav ml-auto wow fadeInDown" data-wow-duration="2s" data-wow-delay="0s">
             <!-- Authentication Links -->
             {{-- cart --}}
             <li class="nav-item cart">
