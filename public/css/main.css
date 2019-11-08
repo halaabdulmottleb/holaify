@@ -19,16 +19,12 @@ body {
     align-items: center;
     flex-direction: column;
     background: #fe494c;
-    /* background-color: #f2f2f2;
-    background-image: url("../img/bg.svg");
-    background-attachment: fixed; */
 }
 
 .loading span {
     font-family: 'Righteous', monospace;
     font-size: 1.7rem;
     margin-bottom: 1rem;
-    /* color: #fe494c; */
     color: white;
     font-weight: 700;
 }
@@ -104,18 +100,12 @@ li.nav-item {
     text-align: center;
     font-size: .9rem;
     margin: 0 .3rem;
-    /* border-radius: 5px; */
     transition: 500ms ease;
     position: relative;
 }
 
 li.nav-item.cart {
     font-size: 1.1rem;
-}
-
-.navbar .nav-item:hover {
-    /* background: #f3f3f3; */
-    /* box-shadow: 0 0 5px #d8d8d8; */
 }
 
 li.nav-item::after {
@@ -178,13 +168,8 @@ li.nav-item::after {
 .product-div {
     font-family: 'Raleway', sans-serif;
     display: flex;
-    /* height: 450px; */
     flex-wrap: wrap;
     padding: 1rem;
-}
-
-.product-div div {
-    height: max-content;
 }
 
 .product-div .product-img,
@@ -197,7 +182,7 @@ li.nav-item::after {
 }
 
 .product-div .product-img {
-    flex-grow: 1;
+    flex-grow: 2;
     padding: .5rem;
 }
 
@@ -206,7 +191,7 @@ li.nav-item::after {
 }
 
 .product-div .product-info {
-    flex-grow: 2;
+    flex-grow: 1;
     color: #222B3A;
 }
 
@@ -285,10 +270,7 @@ li.nav-item::after {
     transition: 500ms ease;
     padding: .5rem;
     margin: .3rem;
-    border: 1px solid #dadada;
-    border-left: 0;
-    border-right: 0;
-    border-top: 0;
+    border: 0
 }
 
 .product-div .product-reviews .review .others .div:hover {
@@ -303,17 +285,22 @@ li.nav-item::after {
     flex-wrap: wrap;
 }
 
-.product-div .product-reviews .review .others .div .left .rate label{
- margin: 0;
-  font-size: smaller;
+.product-div .product-reviews .review .others .div .left .rate label {
+    margin: 0;
+    font-size: smaller;
 }
-.product-div .product-reviews .review .others .div .right span{
-  font-size: smaller;
-  font-weight: 600;
-  padding: .5rem;
+
+.product-div .product-reviews .review .others .div .right span {
+    font-size: smaller;
+    font-weight: 600;
+    padding: .5rem;
+}
+.product-div .product-reviews .review .others .text-center{
+    color: rgb(88, 88, 88);
+    font-size: smaller;
 }
 .product-div .product-similar {
-    /* flex-grow: 1; */
+    height: max-content;
 }
 
 .product-div .product-similar .items {

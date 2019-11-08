@@ -76,7 +76,7 @@
           </div>
           {{-- others rating --}}
           <div class="others">
-            <div class="div">
+            <div class="div wow fadeIn" data-wow-duration="2s" data-wow-delay="0s">
               <div class="left d-flex flex-row">
                 <img src="/img/default-user.svg" width="40" alt="user-pic" class="mr-2">
                 <div class="rate">
@@ -106,36 +106,9 @@
               </div>
               <div class="right"><span>8 Nov</span></div>
             </div>
-            <div class="div">
-                <div class="left d-flex flex-row">
-                  <img src="/img/default-user.svg" width="40" alt="user-pic" class="mr-2">
-                  <div class="rate">
-                    <span>
-                      <input type="radio" name="stars" id="star-1" class="d-none" />
-                      <input type="radio" name="stars" id="star-2" class="d-none" />
-                      <input type="radio" name="stars" id="star-3" class="d-none" />
-                      <input type="radio" name="stars" id="star-4" class="d-none" />
-                      <input type="radio" name="stars" id="star-5" class="d-none" />
-                      <section>
-                        <label for="star-1">
-                          <i class="lni-star-filled"></i>
-                        </label>
-                        <label for="star-2">
-                          <i class="lni-star-filled"></i>
-                        </label>
-                        <label for="star-3"><i class="lni-star-filled"></i>
-                        </label>
-                        <label for="star-4"><i class="lni-star-filled"></i>
-                        </label>
-                        <label for="star-5"><i class="lni-star-filled"></i>
-                        </label>
-                      </section>
-                    </span>
-                    <div class="name">Mahmoud Mohamed</div>
-                  </div>
-                </div>
-                <div class="right"><span>8 Nov</span></div>
-              </div>
+            <div class="text-center px-2 pt-2">
+              End of reviews.
+            </div>
           </div>
         </div>
       </div>
@@ -160,12 +133,8 @@
             <img src="/img/shopping.jpg" width="100" alt="">
             <div class="price">EGP 10.00</div>
           </li>
-          <li>
-            <img src="/img/shopping.jpg" width="100" alt="">
-            <div class="price">EGP 10.00</div>
-          </li>
         </ul>
-      </div>  
+      </div>
     </div>
   </div>
 </div>
