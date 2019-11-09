@@ -427,7 +427,7 @@ table {
 
 .btn-dis {
     background: white;
-    color: #1c3053;
+    color: #1c3053 !important;
     cursor: pointer;
 }
 
