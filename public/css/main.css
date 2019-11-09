@@ -6,6 +6,7 @@ body {
     background-color: #f2f2f2;
     background-image: url("../img/bg.svg");
     background-attachment: fixed;
+    font-family: 'Raleway', cursive;
 }
 
 .loading {
@@ -199,7 +200,8 @@ li.nav-item::after {
 } */
 
 /* cart page */
-.cart-div .no-cart {
+.cart-div .no-cart,
+.not-found .no-found {
     background: white;
     border-radius: 6px;
     box-shadow: 0 0 5px #e6e6e6;
@@ -207,7 +209,8 @@ li.nav-item::after {
     margin: auto;
 }
 
-.cart-div .text h2 {
+.cart-div .text div,
+.not-found .text div {
     color: #fe494c;
     font-size: 1.5rem;
     font-family: 'Raleway', sans-serif;
@@ -374,4 +377,40 @@ li.nav-item::after {
 .product-div .product-similar .items li .price {
     font-size: smaller;
     padding: 4px;
+}
+
+/* colletion */
+.collection-div .header{
+    padding: 1rem;
+    font-size: calc(1vw + 20px);
+}
+
+.collection-div .collections{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.collection-div .collections .collection{
+    margin: .3rem;
+    transition: 500ms ease;
+    background: white;
+    border-radius: 10px !important;
+}
+.collection-div .collections .collection:hover{
+    transform: scale(1.05);
+}
+
+.collection-div .collections .collection .body{
+    clip-path: circle(81% at 33% 0%);
+    transition: 500ms ease;
+}
+.collection-div .collections .collection:hover .body{
+    background: #fe494c;
+    clip-path: circle(75%);
+    color: white;
+}
+.collection-div .collections div .rate label{
+    font-size: .8rem;
 }

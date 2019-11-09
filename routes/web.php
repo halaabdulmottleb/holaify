@@ -13,6 +13,9 @@ Route::get('/product', function () {
 Route::get('/profile', function () {
     return view('main.profile');    
 });
+Route::get('/collection', function () {
+    return view('main.collection');    
+});
 //product
 // Route::get('/{collection}/{product}', function () {
 //     return view('main.product');

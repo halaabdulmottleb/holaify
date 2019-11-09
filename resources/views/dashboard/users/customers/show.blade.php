@@ -78,6 +78,9 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            {{-- right side --}}
+            <div class="mx-3" style="flex-grow:1">
                 {{-- address --}}
                 <div class="form">
                     <div class="container">
@@ -97,36 +100,6 @@
                                 <div class="col-sm-12">
                                     <input type="text" readonly class="form-control-plaintext" id="address"
                                         value="41st">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {{-- right side --}}
-            <div class="mx-3" style="flex-grow:1">
-                {{-- profile pic --}}
-                <div class="form">
-                    <div class="container">
-                        <label class="px-2 pb-2">Profile Pic.</label>
-                        <div class="div px-2">
-                            {{-- img --}}
-                            <img src="/img/default-user.svg" alt="admin-pic" width="200" class="img-thumbnail m-auto"
-                                data-toggle="modal" data-target="#showImg">
-                            {{-- preview Image  --}}
-                            <div class="modal fade" id="showImg" tabindex="-1" role="dialog"
-                                aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
-                                        <div class="modal-header border-none">
-                                            <button data-dismiss="modal">
-                                                <span>&times;</span>
-                                            </button>
-                                        </div>
-                                        <div class="modal-body">
-                                            <img src="#" id="prevImg" width="500" class="img-fluid m-auto">
-                                        </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>

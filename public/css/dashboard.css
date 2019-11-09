@@ -162,7 +162,6 @@ body {
 .main-content {
     width: 100%;
     overflow: auto;
-    /* font-family: 'Philosopher', sans-serif; */
     font-family: 'Poppins', sans-serif;
 }
 

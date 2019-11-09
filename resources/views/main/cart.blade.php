@@ -12,7 +12,7 @@
                 </div>
                 {{-- empty cart --}}
                 <div class="text m-auto">
-                    <h2 class="p-3">Cart is empty</h2>
+                    <div class="p-3">Cart is empty</div>
                 </div>
             </div>
             {{-- cart --}}
