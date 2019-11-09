@@ -122,6 +122,15 @@
       {{-- content --}}
       @yield('content')
     </div>
+    {{-- footer --}}
+    <footer>
+      <div class="p-5">
+        <div class="footer">
+          <div class="text-sm">© 2019 Holaify.com</div>
+          <div class="text-base">Holaify developed by <span class="font-bold">M3</span></div>
+        </div>
+      </div>
+    </footer>
   </div>
   {{-- loading --}}
   {{-- @include('componants.loading') --}}

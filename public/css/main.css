@@ -456,3 +456,15 @@ li.nav-item::after {
     padding: 4px 12px;
     height: min-content;
 }
+
+/* footer */
+footer{
+    background: #fe494c;
+    color: white;
+}
+footer .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
