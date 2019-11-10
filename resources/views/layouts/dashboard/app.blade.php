@@ -31,7 +31,8 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
-                    <i class="fas fa-stream"></i>
+                    {{-- <i class="fas fa-stream"></i> --}}
+                    <i class="lni-text-align-left"></i>
                 </button>
                 {{-- nav brand --}}
                 <a class="navbar-brand" href="{{ url('/') }}">

@@ -113,9 +113,6 @@
                     <div class="container">
                         <label class="px-2 pb-3">Other info.</label>
                         <div class="div">
-                            <label class="col">{{ __('Birth Day : ') }} 6 / 6 / 96</label>
-                        </div>
-                        <div class="div">
                             <label class="col">{{ __('Joined at : ') }} 6 / 6 / 96</label>
                         </div>
                     </div>

@@ -81,7 +81,7 @@ body {
 @media (max-width: 767px) {
     #navbarSupportedContent2 {
         transition: 500ms ease;
-        z-index: 1;
+        z-index: 10;
     }
 
     .nav {
@@ -352,22 +352,34 @@ table {
     text-decoration: none;
 }
 
-.div-table .bg-white {
+.div-table .product,
+.div-table .admin,
+.div-table .customer {
     transition: 500ms ease;
     clip-path: circle(100% at 10% 20%);
 }
 
-.div-table .bg-white:hover {
+.div-table .product:hover,
+.div-table .admin:hover,
+.div-table .customer:hover
+{
     transform: scale(1.03);
-    background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    background-image: linear-gradient(135deg, #667eea 0%, #3F51B5 100%);
     box-shadow: 0 0 5px rgba(204, 204, 204, 0.842);
     clip-path: circle(75%);
+    color: #474747;
 }
 
 .div-table a:hover {
     text-decoration: none;
 }
-
+.div-table .product .title,
+.div-table .admin .title,
+.div-table .customer .title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 /* forms */
 .main .form {
     padding: 2rem 10px;
@@ -412,7 +424,7 @@ table {
 }
 
 .btn-primary:hover {
-    box-shadow: 0 0 7px #29323c;
+    /* box-shadow: 0 0 7px #29323c; */
     transform: scale(0.9);
 }
 
@@ -422,7 +434,7 @@ table {
 }
 
 .btn-edit:hover {
-    box-shadow: 0 0 7px #66ea7c;
+    /* box-shadow: 0 0 7px #66ea7c; */
 }
 
 .btn-dis {

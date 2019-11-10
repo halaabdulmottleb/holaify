@@ -16,18 +16,6 @@
   @endcomponent
   {{-- content --}}
   <div class="main p-3">
-    {{-- session message --}}
-    @if (session('message'))
-    @component('componants.session')
-    {{session('message')}}
-    @endcomponent
-    @endif
-    {{-- @if(!$products->count()) --}}
-    {{-- <div class="not-yet">
-      <h3 class="my-3">No Products Yet</h3>
-      <img src="/img/not-found.svg" alt="no-product" width="380">
-    </div> --}}
-    {{-- @else --}}
     {{-- search --}}
     <div class="search w-100 py-3">
       <div class="form-group mb-0">
@@ -38,108 +26,165 @@
         </div>
       </div>
       {{-- grid --}}
-      <div class="grid">
-        <span class="mr-1">View :</span>
-        <i class="fas fa-th-list" :class="{'active' : !grid}" @click="view()" v-if="!grid" data-toggle="tooltip"
-          data-placement="bottom" title="List"></i>
-        <i class="fas fa-th-large" :class="{'active' : grid }" @click="view()" v-if="grid" data-toggle="tooltip"
-          data-placement="bottom" title="Grid"></i>
-      </div>
+      @include('layouts.dashboard.grid')
     </div>
     {{-- grid --}}
     <div class="row mx-0 my-2 justify-around" v-if="grid">
-      {{-- @foreach($products as $product) --}}
-      <div class="p-0 div-table bg-white m-2">
-        <div class="bg-white rounded-lg p-4">
-          <img class="h-16 w-16 md:h-24 md:w-24 mx-auto img-thumbnail " src="/img/default-product.svg">
-          <div class="text-center m-2">
-            <a href="#">
-              <h2 class="text-lg">Product name</h2>
-            </a>
-            <div class="text-gray-600">10 In Stock</div>
-            <div class="text-gray-600">Prdocuct type</div>
-            <div class="text-gray-600">3/5</div>
+      <div class="div-table bg-white m-2">
+        <div class="w-64 max-w-xs rounded overflow-hidden shadow-md product">
+          <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
+          <div class="p-3 body">
+            <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
+            <div class="d-flex flex-column">
+              <div class="rate">
+                <input type="radio" name="stars" id="star-1" class="d-none" />
+                <input type="radio" name="stars" id="star-2" class="d-none" />
+                <input type="radio" name="stars" id="star-3" class="d-none" />
+                <input type="radio" name="stars" id="star-4" class="d-none" />
+                <input type="radio" name="stars" id="star-5" class="d-none" />
+                <section>
+                  <label for="star-1">
+                    <i class="lni-star-filled"></i>
+                  </label>
+                  <label for="star-2">
+                    <i class="lni-star-filled"></i>
+                  </label>
+                  <label for="star-3"><i class="lni-star-filled"></i>
+                  </label>
+                  <label for="star-4"><i class="lni-star-filled"></i>
+                  </label>
+                  <label for="star-5"><i class="lni-star-filled"></i>
+                  </label>
+                </section>
+              </div>
+              <div class="price font-bold text-base mb-2">EGP 10.00</div>
+            </div>
           </div>
         </div>
       </div>
-      {{-- @endforeach --}}
+      <div class="div-table bg-white m-2">
+        <div class="w-64 max-w-xs rounded overflow-hidden shadow-md product">
+          <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
+          <div class="p-3 body">
+            <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
+            <div class="d-flex flex-column">
+              <div class="rate">
+                <input type="radio" name="stars" id="star-1" class="d-none" />
+                <input type="radio" name="stars" id="star-2" class="d-none" />
+                <input type="radio" name="stars" id="star-3" class="d-none" />
+                <input type="radio" name="stars" id="star-4" class="d-none" />
+                <input type="radio" name="stars" id="star-5" class="d-none" />
+                <section>
+                  <label for="star-1">
+                    <i class="lni-star-filled"></i>
+                  </label>
+                  <label for="star-2">
+                    <i class="lni-star-filled"></i>
+                  </label>
+                  <label for="star-3"><i class="lni-star-filled"></i>
+                  </label>
+                  <label for="star-4"><i class="lni-star-filled"></i>
+                  </label>
+                  <label for="star-5"><i class="lni-star-filled"></i>
+                  </label>
+                </section>
+              </div>
+              <div class="price font-bold text-base mb-2">EGP 10.00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="div-table bg-white m-2">
+        <div class="w-64 max-w-xs rounded overflow-hidden shadow-md product">
+          <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
+          <div class="p-3 body">
+            <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
+            <div class="d-flex flex-column">
+              <div class="rate">
+                <input type="radio" name="stars" id="star-1" class="d-none" />
+                <input type="radio" name="stars" id="star-2" class="d-none" />
+                <input type="radio" name="stars" id="star-3" class="d-none" />
+                <input type="radio" name="stars" id="star-4" class="d-none" />
+                <input type="radio" name="stars" id="star-5" class="d-none" />
+                <section>
+                  <label for="star-1">
+                    <i class="lni-star-filled"></i>
+                  </label>
+                  <label for="star-2">
+                    <i class="lni-star-filled"></i>
+                  </label>
+                  <label for="star-3"><i class="lni-star-filled"></i>
+                  </label>
+                  <label for="star-4"><i class="lni-star-filled"></i>
+                  </label>
+                  <label for="star-5"><i class="lni-star-filled"></i>
+                  </label>
+                </section>
+              </div>
+              <div class="price font-bold text-base mb-2">EGP 10.00</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     {{-- table --}}
     <table class="table table-hover" v-else>
       <thead>
         <tr>
-          <th scope="col" width="15" class="d-flex align-items-center border-0">
+          <th scope="col" width="15">
             <div class="custom-control custom-checkbox" style="z-index: 1;" data-toggle="tooltip" data-placement="right"
               title="Select all Products">
               <input type="checkbox" class="custom-control-input selected-all" name="selectAll" id="selectAll"
                 @click="selectAll()">
               <label class="custom-control-label" for="selectAll"></label>
             </div>
-            {{-- delete selected --}}
-            <div class="position-absolute pl-5" v-if="selectedAll">
-              <form action="" method="GET">
-                @csrf
-                <button class="btn btn-primary btn-dis">
-                  {{ __('Delete Selected') }}
-                </button>
-              </form>
-            </div>
           </th>
-          {{-- <th scope="col">Product</th>
+          <th scope="col">Product</th>
           <th scope="col">Inventory</th>
           <th scope="col">Type</th>
-          <th scope="col">Rate</th> --}}
+          <th scope="col">Rate</th>
         </tr>
       </thead>
       <tbody>
-        {{-- @foreach ($products as $product) --}}
         <tr>
-          {{-- 
-            <td>
+          <td>
             <div class="custom-control custom-checkbox">
-              <input type="checkbox" class="custom-control-input" name="product" value="{{$product->id}}"
-          id="{{$product->id}}" @change="selected()">
-          <label class="custom-control-label" for="{{$product->id}}"></label>
+              <input type="checkbox" class="custom-control-input" name="product" value="product-id" id="Product-id"
+                @change="selected()">
+              <label class="custom-control-label" for="Product-id"></label>
+            </div>
+          </td>
+          <td><a href="#"><img src="/img/default-product.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
+                style="margin-right:8px">Iphone</a></td>
+          <td>5 in stock</td>
+          <td>Mobile</td>
+          <td>
+            <div class="rate text-sm">
+              <input type="radio" name="stars" id="star-1" class="d-none" />
+              <input type="radio" name="stars" id="star-2" class="d-none" />
+              <input type="radio" name="stars" id="star-3" class="d-none" />
+              <input type="radio" name="stars" id="star-4" class="d-none" />
+              <input type="radio" name="stars" id="star-5" class="d-none" />
+              <section>
+                <label for="star-1">
+                  <i class="lni-star-filled"></i>
+                </label>
+                <label for="star-2">
+                  <i class="lni-star-filled"></i>
+                </label>
+                <label for="star-3"><i class="lni-star-filled"></i>
+                </label>
+                <label for="star-4"><i class="lni-star-filled"></i>
+                </label>
+                <label for="star-5"><i class="lni-star-filled"></i>
+                </label>
+              </section>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
-  </td>
-  <td><a href="/auth/products/{{$product->id}}"><img src="{{$product->img}}"
-        class="img-thumbnail d-none d-md-inline-block" width="35" style="margin-right:8px">{{$product->title}}</a></td>
-  <td>{{$product->inventory}} In Stock</td>
-  <td>{{$product->type}}</td> --}}
-  {{-- <td>{{$product->rate}}</td> --}}
-  <td>
-    <div class="custom-control custom-checkbox">
-      <input type="checkbox" class="custom-control-input" name="product" value="product-id" id="Product-id"
-        @change="selected()">
-      <label class="custom-control-label" for="Product-id"></label>
-    </div>
-  </td>
-  <td><a href="#"><img src="/img/default-product.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
-        style="margin-right:8px">Iphone</a></td>
-  <td>5 in stock</td>
-  <td>Mobile</td>
-  <td>3/5</td>
-  </tr>
-  {{-- sdasda/ --}}
-  <tr>
-    <td>
-      <div class="custom-control custom-checkbox">
-        <input type="checkbox" class="custom-control-input" name="product" value="product-id" id="Product-id2"
-          @change="selected()">
-        <label class="custom-control-label" for="Product-id2"></label>
-      </div>
-    </td>
-    <td><a href="#"><img src="/img/default-product.svg" class="img-thumbnail d-none d-md-inline-block" width="35"
-          style="margin-right:8px">Iphone</a></td>
-    <td>5 in stock</td>
-    <td>Mobile</td>
-    <td>3/5</td>
-  </tr>
-  {{-- @endforeach --}}
-  </tbody>
-  </table>
-  {{-- @endif --}}
-</div>
 </div>
 @endsection
 @section('script')
@@ -175,8 +220,8 @@
       }else{
         // some checkbox checked
         this.selectedAll = false;
-        $('input[name="selectAll"]').prop('indeterminate', true);
         $('input[name="selectAll"]').prop('checked', false);
+        $('input[name="selectAll"]').prop('indeterminate', true);
       }
     },
     closeSession(){
