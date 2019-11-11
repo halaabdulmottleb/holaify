@@ -127,7 +127,8 @@ li.nav-item::after {
 .navbar .nav-item .nav-link {
     padding: 4px 8px;
 }
-.navbar .nav-item .nav-link .num{
+
+.navbar .nav-item .nav-link .num {
     position: absolute;
     bottom: 5px;
     right: 0;
@@ -137,38 +138,46 @@ li.nav-item::after {
     padding: 1px 5px;
     border-radius: 15px;
 }
+
 .navbar .nav-item:hover .nav-link {
     color: #fe494c;
 }
-.navbar .navbar-nav{
+
+.navbar .navbar-nav {
     display: flex;
     flex-direction: row;
 }
-.searchModel .modal-content{
+
+.searchModel .modal-content {
     border-radius: 11px;
     border: 0;
     box-shadow: 0 0 5px #f7f7f7;
 }
-.searchModel .modal-header{
+
+.searchModel .modal-header {
     border: 0;
 }
-.searchModel .modal-header .form-inline i{
+
+.searchModel .modal-header .form-inline i {
     position: absolute;
     top: 12px;
     left: 10px;
     color: #6b6b6b;
 }
-.searchModel .modal-header .form-control{
+
+.searchModel .modal-header .form-control {
     background: #e8e8e8;
     border: 0;
     border-radius: 10px;
     padding-left: 2rem;
-    font-weight: 600;    
+    font-weight: 600;
 }
-.searchModel .modal-header .form-control:focus{
+
+.searchModel .modal-header .form-control:focus {
     box-shadow: none;
 }
-.searchModel .modal-header .btn{
+
+.searchModel .modal-header .btn {
     color: #6b6b6b;
     font-weight: 600;
     background: transparent;
@@ -177,12 +186,14 @@ li.nav-item::after {
     border-radius: 10px;
     transition: 500ms ease;
 }
-.searchModel .modal-header .btn:hover{
+
+.searchModel .modal-header .btn:hover {
     background: #fe494c;
     color: white;
     transform: scale(0.99);
     box-shadow: none;
 }
+
 /* .navbar-expand-md .navbar-nav .dropdown-menu {
   border: 0;
   box-shadow: 0 0 8px #8080809e;
@@ -349,10 +360,12 @@ li.nav-item::after {
     font-weight: 600;
     padding: .5rem;
 }
-.product-div .product-reviews .review .others .text-center{
+
+.product-div .product-reviews .review .others .text-center {
     color: rgb(88, 88, 88);
     font-size: smaller;
 }
+
 .product-div .product-similar {
     height: max-content;
 }
@@ -380,7 +393,7 @@ li.nav-item::after {
 }
 
 /* colletion */
-.collection-div .header{
+.collection-div .header {
     padding: 1rem;
     font-size: calc(1vw + 20px);
 }
@@ -389,7 +402,7 @@ li.nav-item::after {
 .recommend-div .recommended,
 .rated-div .rateded,
 .rated-div .rateded .top-rated,
-.added-div .just-added{
+.added-div .just-added {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -400,54 +413,63 @@ li.nav-item::after {
 .collection-div .collections .collection,
 .recommend-div .recommended .recommend,
 .rated-div .rateded .rated,
-.added-div .just-added .added{
+.added-div .just-added .added {
     margin: .3rem;
     transition: 500ms ease;
     background: white;
     border-radius: 10px !important;
 }
+
 .collection-div .collections .collection:hover,
 .recommend-div .recommended .recommend:hover,
 .rated-div .rateded .rated:hover,
-.added-div .just-added .added:hover{
+.added-div .just-added .added:hover,
+.user .main .body .orders .product:hover {
     transform: scale(1.05);
 }
 
-.collection-div .collections .collection .body{
+.collection-div .collections .collection .body {
     clip-path: circle(81% at 33% 0%);
     transition: 500ms ease;
 }
-.collection-div .collections .collection:hover .body{
+
+.collection-div .collections .collection:hover .body {
     background: #fe494c;
     clip-path: circle(75%);
     color: white;
 }
-.collection-div .collections div .rate label{
+
+.collection-div .collections div .rate label {
     font-size: .8rem;
 }
 
 /* main home */
 .recommend-div .header,
 .rated-div .header,
-.added-div .header{
+.added-div .header {
     font-size: calc(1vw + 10px);
 }
-.recommend-div .recommended .recommend{
+
+.recommend-div .recommended .recommend {
     background: transparent !important;
     border-radius: 0 !important;
 }
-.recommend-div .recommended .recommend:hover .body{
+
+.recommend-div .recommended .recommend:hover .body {
     color: #fe494c;
 }
+
 .recommend-div .recommended .recommend .body .title,
 .added-div .just-added .added .body .title,
-.rated-div .rateded .top-rated .title{
+.rated-div .rateded .top-rated .title,
+.user .main .body .orders .title {
     width: 60%;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-.added-div .just-added .added .body .new{
+
+.added-div .just-added .added .body .new {
     border-radius: 50px;
     background: #fe494c;
     color: white;
@@ -457,12 +479,101 @@ li.nav-item::after {
     height: min-content;
 }
 
+/* profile */
+.user .user-div {
+    height: fit-content;
+}
+
+.user .user-div .setting .li {
+    padding: 1rem;
+    border-radius: 8px;
+    transition: 500ms ease;
+    clip-path: circle(100% at 10% 10%);
+}
+
+.user .user-div .setting .li:hover,
+.user .user-div .setting .li.active {
+    background: #fe494c;
+    color: white;
+    clip-path: circle(75%);
+}
+
+.user .user-div .setting .li:hover a {
+    text-decoration: none;
+    color: white;
+}
+
+.user .main .header {
+    font-size: 1.5rem;
+}
+
+.user .main .body .orders {
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.user .main .body .orders .product {
+    transition: 500ms ease;
+}
+
+a i.fa-edit:hover {
+    color: #fe494c;
+    cursor: pointer;
+}
+
+.btn-primary {
+    border: 0;
+    color: #fe494c;
+    background: transparent;
+    border: 1px solid #fe494c;
+    padding: 8px 15px;
+    transition: 500ms ease;
+    border-radius: 50px;
+}
+
+.btn-primary:hover {
+    border: 1px solid #fe494c;
+    box-shadow: none;
+    background: #fe494c;
+    transform: scale(0.9);
+    color: white;
+}
+
+.btn-dis {
+    background: white;
+    color: #1c3053 !important;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-dis:hover {
+    border: none;
+    background: #222b3a36;
+    color: #1c3053;
+    box-shadow: 0 0 5px #2020209c;
+}
+.deliverd,
+.ongoing{
+    height: fit-content;
+    padding: 3px 10px;
+    background: #3bff43;
+    border-radius: 24px;
+    color: white;
+    font-size: smaller;
+}
+.ongoing{
+    background: #653bff !important;
+}
+.canceled{
+    background: #e91e63 !important;
+}
 /* footer */
-footer{
+footer {
     background: #fe494c;
     color: white;
 }
-footer .footer{
+
+footer .footer {
     display: flex;
     justify-content: center;
     align-items: center;
