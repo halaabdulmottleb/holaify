@@ -33,16 +33,12 @@
       </li>
       {{-- users --}}
       <li class="nav-item">
-        <a class="nav-link" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-users"></i>
-          Users</a>
-        <div class="dropdown-ul">
-          <div class="li">
-            <a class="dropdown-li" href="/auth/admins">Admins</a>
-          </div>
-          <div class="li">
-            <a class="dropdown-li" href="/auth/customers">Customers</a>
-          </div>
-        </div>
+        <a class="nav-link" href="/auth/customers"><i class="fas fa-user-friends"></i>
+          Customers</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/auth/admins"><i class="fas fa-users-cog"></i>
+          Admins</a>
       </li>
     </div>
   </ul>

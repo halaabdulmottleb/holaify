@@ -27,7 +27,7 @@
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md shadow-sm">
-            <div class="container">
+            <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent2" aria-controls="navbarSupportedContent2" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
@@ -36,8 +36,6 @@
                 </button>
                 {{-- nav brand --}}
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="/img/brand.svg" width="30" class="wow fadeIn" data-wow-duration="2s" data-wow-delay="0s"
-                        alt="brand-img">
                     <span class="wow fadeInLeft" data-wow-duration="1s"
                         data-wow-delay="1s">{{ config('app.name', 'Holaify') }}</span>
                 </a>

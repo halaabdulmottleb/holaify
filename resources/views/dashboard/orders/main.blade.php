@@ -39,6 +39,7 @@
         <th scope="col">Customer</th>
         <th scope="col">Order</th>
         <th scope="col">address</th>
+        <th scope="col">State</th>
       </tr>
     </thead>
     <tbody>
@@ -55,6 +56,7 @@
               style="margin-right:8px">Mark</a></td>
         <td>order</td>
         <td>41st.</td>
+        <td>Deliverd</td>
       </tr>
       {{-- @endforeach --}}
     </tbody>

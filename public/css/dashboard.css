@@ -24,7 +24,7 @@ body {
     align-items: center;
 }
 .navbar .navbar-brand span{
-    font-size: medium;
+    /* font-size: medium; */
     color: white;
 
 }
@@ -231,16 +231,14 @@ body {
     background: #fffffffa;
     transition: 500ms ease-in-out;
     margin: .3rem;
-    border-radius: 5px;
-    min-width: 210px;
-    box-shadow: 0 0 5px #d0d0d0;
+    /* border-radius: 5px; */
+    /* min-width: 210px; */
+    /* box-shadow: 0 0 5px #d0d0d0; */
 }
 
 .dash .div-table:hover {
     box-shadow: 0 0 7px #cfcfcfba;
-    transform: scale(1.03);
-    background-image: linear-gradient(135deg, #667eea 0%, #3F51B5 100%);
-    color: white;
+    transform: scale(1.02);
 }
 
 .dash .div-table .heading {
@@ -424,17 +422,12 @@ table {
 }
 
 .btn-primary:hover {
-    /* box-shadow: 0 0 7px #29323c; */
     transform: scale(0.9);
 }
 
 .btn-edit {
     background: linear-gradient(135deg, #27e156 0%, #16991a 100%);
     margin-bottom: 5px;
-}
-
-.btn-edit:hover {
-    /* box-shadow: 0 0 7px #66ea7c; */
 }
 
 .btn-dis {

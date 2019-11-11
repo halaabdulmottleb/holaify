@@ -25,66 +25,41 @@
         </div>
     </div>
     {{-- Content --}}
-    <div class="overview p-5">
+    <div class="overview p-3">
         {{-- overview --}}
-        <div class="row justify-center py-3">
-            <div class="div-table">
+        <div class="row mx-0 justify-center py-3">
+            <div class="div-table md:w-1/4 w-full">
                 <div class="heading">
-                    Total Sale
+                    Orders
                 </div>
-                <div class="body">
-                    0.00
+                <div class="chart-container">
+                    <canvas id="myChart" width="200" height="200"></canvas>
                 </div>
             </div>
-            <div class="div-table">
+            <div class="div-table md:w-2/4 w-full">
+                <div class="heading font-bold">
+                    Orders Weekly
+                </div>
+                <div class="body">
+                    
+                </div>
+            </div>
+            <div class="div-table md:w-2/4 w-full">
                 <div class="heading">
                     Total Order
                 </div>
                 <div class="body">
-                    0
+                    asdsd 0
                     {{-- {{$orders->count()}} --}}
                 </div>
             </div>
-            <div class="div-table">
+            <div class="div-table md:w-1/4 w-full">
                 <div class="heading">
                     Total Customers
                 </div>
                 <div class="body">
                     0
                     {{-- {{$customers->count()}} --}}
-                </div>
-            </div>
-            <div class="div-table">
-                <div class="heading">
-                    Total Products
-                </div>
-                <div class="body">
-                    0
-                    {{-- {{$products->count()}} --}}
-                </div>
-            </div>
-        </div>
-        {{-- activity --}}
-        <div class="row justify-content-around py-3">
-            <div class="top-customer m-1">
-                <div class="heading pb-3">
-                    <h3>Top Customers</h3>
-                </div>
-                <div class="list mx-3">
-                    <ul class="lists mx-2">
-                        <li class="customer">
-                            <div>Mahmoud</div>
-                            <div class="orders">5 Orders</div>
-                        </li>
-                        <li class="customer">
-                            <div>Mahmoud</div>
-                            <div class="orders">100 Orders</div>
-                        </li>
-                        <li class="customer">
-                            <div>Mahmoud</div>
-                            <div class="orders"">500 Orders</div>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
