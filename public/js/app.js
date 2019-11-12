@@ -49396,13 +49396,11 @@ axios__WEBPACK_IMPORTED_MODULE_1___default.a.defaults.headers.common['X-Requeste
 window.WOW = wow_js__WEBPACK_IMPORTED_MODULE_4___default.a;
 new wow_js__WEBPACK_IMPORTED_MODULE_4___default.a().init();
 var ctx = document.getElementById('myChart');
-var ctxx = document.getElementById('ordersWeekly');
 var myChart = new chart_js__WEBPACK_IMPORTED_MODULE_5___default.a(ctx, {
   type: 'doughnut',
   data: {
-    labels: ['Pending Orders', 'Canceled Orders', 'Deliverd Orders'],
+    labels: ['Pending', 'Canceled', 'Deliverd'],
     datasets: [{
-      // label: '# of Votes',
       data: [12, 5, 13],
       backgroundColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', '#3F51B5'],
       borderWidth: 0
@@ -49412,23 +49410,6 @@ var myChart = new chart_js__WEBPACK_IMPORTED_MODULE_5___default.a(ctx, {
     legend: {
       display: false
     }
-  }
-});
-var chart = new chart_js__WEBPACK_IMPORTED_MODULE_5___default.a(ctxx, {
-  type: 'line',
-  data: {
-    datasets: [{
-      data: [10, 20, 30, 40, 50, 60]
-    }],
-    labels: ['January', 'February', 'March', 'April', 'May', 'June']
-  },
-  options: {// scales: {
-    //     xAxes: [{
-    //         ticks: {
-    //             min: 'March'
-    //         }
-    //     }]
-    // }
   }
 });
 

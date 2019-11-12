@@ -15,59 +15,123 @@
   @endslot
   @endcomponent
   {{-- content --}}
-  <div class="main p-3">
+  <div class="main">
     {{-- search --}}
     <div class="search w-100 py-3">
+      {{-- view--}}
+      @include('layouts.dashboard.grid')
+      {{-- search --}}
       <div class="form-group mb-0">
         <div class="position-relative p-0">
           <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
-          <input id="search" type="text" class="form-control search-input" name="search"
-            placeholder="Search for Customers">
+          <input id="search" type="text" class="form-control search-input" name="search" placeholder="Filter Customers">
         </div>
       </div>
-      {{-- view--}}
-      @include('layouts.dashboard.grid')
     </div>
     {{-- csutomr in grid --}}
     <div class="row mx-0 my-2 justify-around" v-if="grid">
-      <div class="div-table bg-white m-2">
-        <div class="w-48 max-w-xs rounded overflow-hidden shadow-md admin">
-          <img class="w-32 mx-auto my-3" src="/img/default-user.svg" alt="admin-img">
-          <div class="p-3 body">
-            <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
-            <div class="d-flex flex-column">
-              <div class="font-bold text-xs mb-2 title">100 Orders</div>
-              <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
-            </div>
+      <div class="bg-white rounded-lg py-3 px-4 customer m-1">
+        <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-xs mb-2 title">100 Orders</div>
+            <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
           </div>
         </div>
       </div>
-      <div class="div-table bg-white m-2">
-        <div class="w-48 max-w-xs rounded overflow-hidden shadow-md admin">
-          <img class="w-32 mx-auto my-3" src="/img/default-user.svg" alt="admin-img">
-          <div class="p-3 body">
-            <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
-            <div class="d-flex flex-column">
-              <div class="font-bold text-xs mb-2 title">100 Orders</div>
-              <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
-            </div>
+      <div class="bg-white rounded-lg py-3 px-4 customer m-1">
+        <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-xs mb-2 title">100 Orders</div>
+            <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
           </div>
         </div>
       </div>
-      <div class="div-table bg-white m-2">
-        <div class="w-48 max-w-xs rounded overflow-hidden shadow-md admin">
-          <img class="w-32 mx-auto my-3" src="/img/default-user.svg" alt="admin-img">
-          <div class="p-3 body">
-            <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
-            <div class="d-flex flex-column">
-              <div class="font-bold text-xs mb-2 title">100 Orders</div>
-              <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
-            </div>
+      <div class="bg-white rounded-lg py-3 px-4 customer m-1">
+        <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-xs mb-2 title">100 Orders</div>
+            <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg py-3 px-4 customer m-1">
+        <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-xs mb-2 title">100 Orders</div>
+            <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg py-3 px-4 customer m-1">
+        <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-xs mb-2 title">100 Orders</div>
+            <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg py-3 px-4 customer m-1">
+        <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-xs mb-2 title">100 Orders</div>
+            <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg py-3 px-4 customer m-1">
+        <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-xs mb-2 title">100 Orders</div>
+            <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg py-3 px-4 customer m-1">
+        <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-xs mb-2 title">100 Orders</div>
+            <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg py-3 px-4 customer m-1">
+        <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-xs mb-2 title">100 Orders</div>
+            <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg py-3 px-4 customer m-1">
+        <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-xs mb-2 title">100 Orders</div>
+            <div class="font-bold text-sm mb-2 title">400 EGP spent</div>
           </div>
         </div>
       </div>
     </div>
-    {{-- table --}}
+    {{-- customer in table --}}
     <table class="table table-hover" v-else>
       <thead>
         <tr>

@@ -1,6 +1,6 @@
 {{-- after --}}
 {{-- content --}}
-<div class="main p-3">
+<div class="main">
   {{-- session message --}}
   @if (session('message'))
   @component('componants.session')
@@ -16,6 +16,9 @@
   @else
   {{-- search --}}
   <div class="search w-100 py-3">
+    {{-- grid --}}
+    @include('layouts.dashboard.grid')
+    search
     <div class="form-group mb-0">
       <div class="p-0 position-relative">
         <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
@@ -23,16 +26,13 @@
           placeholder="Search for Products">
       </div>
     </div>
-    {{-- grid --}}
-    @include('layouts.dashboard.grid')
   </div>
   {{-- products in grid --}}
   <div class="row mx-0 my-2 justify-around" v-if="grid">
     @foreach($products as $product)
-    <div class="div-table bg-white m-2">
-      <div class="w-64 max-w-xs rounded overflow-hidden shadow-md product">
+    <div class="w-56 bg-white m-2 md:w-1/5 rounded overflow-hidden shadow-md product">
         <img class="w-full" src="{{$product->img}}" alt="{{$product->title}}">
-        <div class="p-3 body">
+        <div class="p-2 body">
           <div class="font-bold text-lg mb-2 title w-100">{{$product->title}}</div>
           <div class="d-flex flex-column">
             <div class="rate">
@@ -56,11 +56,10 @@
                 </label>
               </section>
             </div>
-            <div class="price font-bold text-base mb-2">{{$product->price}}</div>
+            <div class="price font-bold text-sm mb-2">{{$product->price}}</div>
           </div>
         </div>
       </div>
-    </div>
     @endforeach
   </div>
   {{-- products in table --}}

@@ -84,7 +84,7 @@
             {{-- sideNav --}}
             @include('layouts.dashboard.sideNav')
             {{-- content --}}
-            <div class="main-content p-4 wow fadeIn" data-wow-duration="2s" data-wow-delay="0s">
+            <div class="main-content p-3 wow fadeIn" data-wow-duration="2s" data-wow-delay="0s">
                 <div class="container">
                     @yield('content')
                 </div>

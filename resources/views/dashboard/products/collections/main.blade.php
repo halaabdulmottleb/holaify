@@ -15,7 +15,7 @@
   @endslot
   @endcomponent
   {{-- content --}}
-  <div class="main p-3">
+  <div class="main">
     {{-- session message --}}
     @if (session('message'))
     @component('componants.session')
@@ -30,17 +30,50 @@
     @else --}}
     {{-- select & search --}}
     <div class="search w-100 py-3">
+      {{-- view --}}
+      @include('layouts.dashboard.grid')
       {{-- search --}}
       <div class="form-group mb-0">
         <div class="p-0 position-relative">
           <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
-          <input id="search" type="text" class="form-control search-input" name="search"
-            placeholder="Search for Collections">
+          <input id="search" type="text" class="form-control search-input" name="search" placeholder="Filter Orders">
         </div>
       </div>
     </div>
+    {{-- grid --}}
+    <div class="row mx-0 my-2 justify-around" v-if="grid">
+      <div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
+        <div class="text-center">
+          <div class="font-bold text-xl mb-2 title w-100">Collection Name</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-sm mb-2 title">4 Products</div>
+          </div>
+        </div>
+      </div><div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
+          <div class="text-center">
+            <div class="font-bold text-xl mb-2 title w-100">Collection Name</div>
+            <div class="d-flex flex-column">
+              <div class="font-bold text-sm mb-2 title">4 Products</div>
+            </div>
+          </div>
+        </div><div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
+            <div class="text-center">
+              <div class="font-bold text-xl mb-2 title w-100">Collection Name</div>
+              <div class="d-flex flex-column">
+                <div class="font-bold text-sm mb-2 title">4 Products</div>
+              </div>
+            </div>
+          </div><div class="bg-white rounded-lg py-3 shadow px-4 order m-1">
+              <div class="text-center">
+                <div class="font-bold text-xl mb-2 title w-100">Collection Name</div>
+                <div class="d-flex flex-column">
+                  <div class="font-bold text-sm mb-2 title">4 Products</div>
+                </div>
+              </div>
+            </div>
+    </div>
     {{-- table --}}
-    <table class="table table-hover">
+    <table class="table table-hover" v-else>
       <thead>
         <tr>
           <th scope="col" width="15">#</th>
@@ -69,14 +102,44 @@
 @section('script')
 <script>
   let app = new Vue({  
-  el:".content",
-  data:{
-  },
-  methods:{
-    closeSession(){
-      $('.session').remove();
-    }
-  }
- })
+      el:".content",
+      data:{
+        grid:false,
+        selectedAll:false,
+        anySelect:false
+      },
+      methods:{
+        // grid view
+        view(){
+          this.grid = !this.grid;
+        },
+        selectAll(){
+          this.selectedAll = !this.selectedAll;
+          if(this.selectedAll){
+            // select All
+            $('input[name="admin"]').prop('checked',true);
+          }else{
+            // diselect All
+            $('input[name="admin"]').prop('checked',false);        
+          }
+        },
+        selected(){
+          if($('input[name="admin"]:not(:checked)').length == 0){ 
+            // all are checked
+            this.selectedAll = true;
+            $('input[name="selectAll"]').prop('checked', true);
+            $('input[name="selectAll"]').prop('indeterminate', false);
+          }else{
+            // some checkbox checked
+            this.selectedAll = false;
+            $('input[name="selectAll"]').prop('indeterminate', true);
+            $('input[name="selectAll"]').prop('checked', false);
+          }
+        },
+        closeSession(){
+          $('.session').remove();
+        }
+      }
+    })
 </script>
 @endsection
