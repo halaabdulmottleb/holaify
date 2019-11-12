@@ -5,23 +5,23 @@
     <div class="cart-div p-3">
         <div class="row mx-0 justify-content-center">
             {{-- no cart --}}
-            {{-- <div class="p-3 d-flex justify-content-center no-cart">
-                img
+            <div class="p-3 d-flex justify-content-center no-cart">
+                {{-- img --}}
                 <div class="img m-auto">
                     <img src="/img/empty-cart.gif" width="520" alt="no-cart">
                 </div>
-                empty cart
+                {{-- empty cart --}}
                 <div class="text m-auto">
                     <div class="p-3">Cart is empty</div>
                 </div>
-            </div> --}}
+            </div>
             {{-- cart --}}
             {{-- ptoduct image --}}
-            <div class="products max-w-2xl w-full m-1 bg-white shadow-sm rounded-lg">
+            {{-- <div class="products max-w-2xl w-full m-1 bg-white shadow-sm rounded-lg">
                 <div class="header text-3xl font-bold p-4">
                     Shopping Cart (2)
                 </div>
-                {{-- products --}}
+                products
                 <div class="p-3">
                     <div class="max-w-sm min-w-sm md:flex bg-gray-200 shadow rounded-lg mx-auto my-1 p-6">
                         <img class="h-24 w-24 rounded-full mx-auto" src="/img/shopping.jpg">
@@ -43,7 +43,7 @@
                         </div>
                 </div>
             </div>
-            {{-- product info --}}
+            product info
             <div class="checkouts m-1 p-4 bg-white shadow-sm rounded-lg" style="height:fit-content">
                 <div class="m-2">
                     <div class="text-3xl font-bold pb-1">Total Price:</div>
@@ -52,7 +52,7 @@
                         <button class="btn btn-primary text-lg mx-auto">Checkout your Orders</button>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>

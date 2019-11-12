@@ -54,9 +54,6 @@
                       </form>
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     </div>
-                    <div class="modal-body">
-                      ...
-                    </div>
                   </div>
                 </div>
               </div>

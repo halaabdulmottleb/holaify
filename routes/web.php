@@ -10,8 +10,17 @@ Route::get('/cart', function () {
 Route::get('/product', function () {
     return view('main.product');    
 });
-Route::get('/profile', function () {
+Route::get('/profile/orders', function () {
+    return view('main.User.orders');   
+});
+Route::get('/profile/setting', function () {
     return view('main.User.setting');   
+});
+Route::get('/profile', function () {
+    return view('main.User.profile');   
+});
+Route::get('/profile/edit', function () {
+    return view('main.User.edit');   
 });
 Route::get('/collection', function () {
     return view('main.collection');    
