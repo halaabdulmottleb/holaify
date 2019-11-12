@@ -15,7 +15,7 @@
       </a>
     </div>
   </div>
-  <div class="main px-4 py-3">
+  <div class="main">
     <form method="POST" action="/auth/collections/{{$collection->id}}" class="w-100 row m-0 justify-content-around">
       @csrf
       @method('PATCH')

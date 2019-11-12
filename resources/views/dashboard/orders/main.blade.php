@@ -48,36 +48,38 @@
         </div>
       </div>
       <div class="bg-white rounded-lg py-3 px-4 order m-1">
-          <img class="h-16 w-16 rounded-full mx-auto my-2" src="/img/default-user.svg">
-          <div class="text-center">
-            <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
-            <div class="d-flex flex-column">
-              <div class="font-bold text-sm mb-2 title">Order Code</div>
-              <div class="font-bold text-sm mb-2 title">41st. bla bla bla bla</div>
-              <div class="font-bold text-xs mb-2 title"><span class="deliverd">Deliverd</span></div>
-            </div>
+        <img class="h-16 w-16 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-sm mb-2 title">Order Code</div>
+            <div class="font-bold text-sm mb-2 title">41st. bla bla bla bla</div>
+            <div class="font-bold text-xs mb-2 title"><span class="deliverd">Deliverd</span></div>
           </div>
-        </div><div class="bg-white rounded-lg py-3 px-4 order m-1">
-            <img class="h-16 w-16 rounded-full mx-auto my-2" src="/img/default-user.svg">
-            <div class="text-center">
-              <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
-              <div class="d-flex flex-column">
-                <div class="font-bold text-sm mb-2 title">Order Code</div>
-                <div class="font-bold text-sm mb-2 title">41st. bla bla bla bla</div>
-                <div class="font-bold text-xs mb-2 title"><span class="deliverd">Deliverd</span></div>
-              </div>
-            </div>
-          </div><div class="bg-white rounded-lg py-3 px-4 order m-1">
-              <img class="h-16 w-16 rounded-full mx-auto my-2" src="/img/default-user.svg">
-              <div class="text-center">
-                <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
-                <div class="d-flex flex-column">
-                  <div class="font-bold text-sm mb-2 title">Order Code</div>
-                  <div class="font-bold text-sm mb-2 title">41st. bla bla bla bla</div>
-                  <div class="font-bold text-xs mb-2 title"><span class="deliverd">Deliverd</span></div>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg py-3 px-4 order m-1">
+        <img class="h-16 w-16 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-sm mb-2 title">Order Code</div>
+            <div class="font-bold text-sm mb-2 title">41st. bla bla bla bla</div>
+            <div class="font-bold text-xs mb-2 title"><span class="deliverd">Deliverd</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg py-3 px-4 order m-1">
+        <img class="h-16 w-16 rounded-full mx-auto my-2" src="/img/default-user.svg">
+        <div class="text-center">
+          <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
+          <div class="d-flex flex-column">
+            <div class="font-bold text-sm mb-2 title">Order Code</div>
+            <div class="font-bold text-sm mb-2 title">41st. bla bla bla bla</div>
+            <div class="font-bold text-xs mb-2 title"><span class="deliverd">Deliverd</span></div>
+          </div>
+        </div>
+      </div>
     </div>
     {{-- table --}}
     <table class="table table-hover" v-else>

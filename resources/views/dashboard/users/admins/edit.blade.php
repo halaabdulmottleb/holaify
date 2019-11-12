@@ -16,7 +16,7 @@
         </div>
     </div>
     {{-- content --}}
-    <div class="main p-3">
+    <div class="main">
         <form method="POST" action="/auth/admins/{{$admin->name}}" class="w-100 row m-0">
             @csrf
             @method('PATCH')

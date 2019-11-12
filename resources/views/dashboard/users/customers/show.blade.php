@@ -15,9 +15,9 @@
         </div>
     </div>
     {{-- content --}}
-    <div class="main p-3">
+    <div class="main">
         {{-- edit && delete --}}
-        <div class="row w-100 mx-0 justify-content-end">
+        <div class="row w-100 mx-0 justify-content-end mt-2">
             {{-- Edit customer --}}
             <div class="mx-2">
                 <a href="#" class="btn btn-primary w-100 btn-edit">
@@ -154,14 +154,16 @@
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th scope="col">#</th>
                                     <th scope="col">Order</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col">State</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td>1</td>
-                                    <td>order</td>
+                                    <td>order Code</td>
+                                    <td class="text-sm">12 Nov 19</td>
+                                    <td><span class="text-sm deliverd">Deliverd</span></td>
                                 </tr>
                             </tbody>
                         </table>

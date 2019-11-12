@@ -16,7 +16,7 @@
         </div>
     </div>
     {{-- form --}}
-    <div class="main px-4 py-3">
+    <div class="main">
         <form method="POST" action="/auth/products/{{$product->id}}" class="w-100 row m-0 justify-content-around">
             @csrf
             @method('PATCH')

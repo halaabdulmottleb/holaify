@@ -15,7 +15,7 @@
         </div>
     </div>
     {{-- form --}}
-    <div class="main px-4 py-3">
+    <div class="main">
         <form method="POST" action="/auth/products" class="w-100 row m-0 justify-content-around">
             @csrf
             <div class="mx-3 mt-3 mb-0" style="flex-grow:2">

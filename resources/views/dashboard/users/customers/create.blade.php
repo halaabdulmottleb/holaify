@@ -15,7 +15,7 @@
         </div>
     </div>
     {{-- content --}}
-    <div class="main p-3">
+    <div class="main">
         <form method="POST" action="/auth/customers" class="w-100 row m-0">
             @csrf
             <div class="row w-100 m-0">
