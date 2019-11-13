@@ -398,6 +398,7 @@ li.nav-item::after {
     font-size: calc(1vw + 20px);
 }
 
+.our-collections .collections,
 .collection-div .collections,
 .recommend-div .recommended,
 .rated-div .rateded,
@@ -409,7 +410,7 @@ li.nav-item::after {
     justify-content: center;
     align-items: center;
 }
-
+.our-collections .collections .collection,
 .collection-div .collections .collection,
 .recommend-div .recommended .recommend,
 .rated-div .rateded .rated,
@@ -419,7 +420,7 @@ li.nav-item::after {
     background: white;
     border-radius: 10px !important;
 }
-
+.our-collections .collections .collection:hover,
 .collection-div .collections .collection:hover,
 .recommend-div .recommended .recommend:hover,
 .rated-div .rateded .rated:hover,
@@ -444,6 +445,18 @@ li.nav-item::after {
 }
 
 /* main home */
+.top{
+    background: #fe494c;
+    padding: 8px 14px;
+    position: absolute;
+    border-radius: 50px;
+    color: white;
+    font-size: 1.2rem;
+    right: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+.our-collections .header,
 .recommend-div .header,
 .rated-div .header,
 .added-div .header {
