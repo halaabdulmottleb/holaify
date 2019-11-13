@@ -12,9 +12,9 @@ axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
 window.WOW = WOW;
 new WOW().init();
-var ctx = document.getElementById('myChart');
+let orders = document.getElementById('myChart');
 
-var myChart = new Chart(ctx, {
+var myChart = new Chart(orders, {
     type: 'doughnut',
     data: {
         labels: ['Pending', 'Canceled', 'Deliverd'],
@@ -29,7 +29,8 @@ var myChart = new Chart(ctx, {
         }]
     },
     options: {
-      legend: {
-        display: false,}
+        legend: {
+            display: false,
+        }
     }
 });

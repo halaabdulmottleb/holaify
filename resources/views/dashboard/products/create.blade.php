@@ -40,7 +40,7 @@
                         <div class="form-group">
                             <label for="description" class="col-md-12">{{ __('Description') }}</label>
 
-                            <div class="col-12 col-md-10 ml-md-4">
+                            <div class="col-12">
                                 <textarea name="description"
                                     class="form-control @error('description') is-invalid @enderror" id="description"
                                     rows="5" placeholder="Enter Collection Description"></textarea>
@@ -157,6 +157,7 @@
                                 <strong>{{ $message }}</strong>
                             </span>
                             @enderror
+                            <span class="text-xs text-gray-600">Max. 2 tags only</span>
                         </div>
                     </div>
                     {{-- collections --}}

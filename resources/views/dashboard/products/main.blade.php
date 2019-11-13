@@ -30,7 +30,7 @@
     </div>
     {{-- grid --}}
     <div class="row mx-0 my-2 justify-around" v-if="grid">
-      <div class="w-48 bg-white m-2 rounded overflow-hidden shadow-md product">
+      <div class="w-48 bg-white m-2 rounded shadow-md product">
         <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
         <div class="p-2 body">
           <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
@@ -56,11 +56,19 @@
                 </label>
               </section>
             </div>
-            <div class="price font-bold text-sm mb-2">EGP 10.00</div>
+            <div class="w-100 d-flex justify-between position-relative">
+              <div class="price font-bold text-sm mb-2">EGP 10.00</div>
+              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item edit" href="#">Edit</a>
+                <a class="dropdown-item delete" href="#">Delete</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="w-48 bg-white m-2 rounded overflow-hidden shadow-md product">
+      <div class="w-48 bg-white m-2 rounded shadow-md product">
         <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
         <div class="p-2 body">
           <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
@@ -86,11 +94,19 @@
                 </label>
               </section>
             </div>
-            <div class="price font-bold text-sm mb-2">EGP 10.00</div>
+            <div class="w-100 d-flex justify-between position-relative">
+              <div class="price font-bold text-sm mb-2">EGP 10.00</div>
+              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item edit" href="#">Edit</a>
+                <a class="dropdown-item delete" href="#">Delete</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="w-48 bg-white m-2 rounded overflow-hidden shadow-md product">
+      <div class="w-48 bg-white m-2 rounded shadow-md product">
         <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
         <div class="p-2 body">
           <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
@@ -116,11 +132,19 @@
                 </label>
               </section>
             </div>
-            <div class="price font-bold text-sm mb-2">EGP 10.00</div>
+            <div class="w-100 d-flex justify-between position-relative">
+              <div class="price font-bold text-sm mb-2">EGP 10.00</div>
+              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item edit" href="#">Edit</a>
+                <a class="dropdown-item delete" href="#">Delete</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="w-48 bg-white m-2 rounded overflow-hidden shadow-md product">
+      <div class="w-48 bg-white m-2 rounded shadow-md product">
         <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
         <div class="p-2 body">
           <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
@@ -146,11 +170,19 @@
                 </label>
               </section>
             </div>
-            <div class="price font-bold text-sm mb-2">EGP 10.00</div>
+            <div class="w-100 d-flex justify-between position-relative">
+              <div class="price font-bold text-sm mb-2">EGP 10.00</div>
+              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item edit" href="#">Edit</a>
+                <a class="dropdown-item delete" href="#">Delete</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="w-48 bg-white m-2 rounded overflow-hidden shadow-md product">
+      <div class="w-48 bg-white m-2 rounded shadow-md product">
         <img class="w-full" src="/img/shopping.jpg" alt="Sunset in the mountains">
         <div class="p-2 body">
           <div class="font-bold text-lg mb-2 title w-100">The Coldest Sunset</div>
@@ -176,7 +208,15 @@
                 </label>
               </section>
             </div>
-            <div class="price font-bold text-sm mb-2">EGP 10.00</div>
+            <div class="w-100 d-flex justify-between position-relative">
+              <div class="price font-bold text-sm mb-2">EGP 10.00</div>
+              <i class="fas fa-ellipsis-v cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false"></i>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item edit" href="#">Edit</a>
+                <a class="dropdown-item delete" href="#">Delete</a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -24,14 +24,21 @@
       <div class="form-group mb-0">
         <div class="p-0 position-relative">
           <label for="search" class="position-absolute"><i class="fas fa-search"></i></label>
-          <input id="search" type="text" class="form-control search-input" name="search"
-            placeholder="Filter Admins">
+          <input id="search" type="text" class="form-control search-input" name="search" placeholder="Filter Admins">
         </div>
       </div>
     </div>
     {{-- grid --}}
     <div class="row mx-0 my-2 justify-around" v-if="grid">
       <div class="bg-white rounded-lg py-3 px-4 admin m-1">
+        <div class="w-100 d-flex justify-end position-relative">
+          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item edit" href="#">Edit</a>
+            <a class="dropdown-item delete" href="#">Delete</a>
+          </div>
+        </div>
         <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
         <div class="text-center">
           <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
@@ -42,6 +49,14 @@
         </div>
       </div>
       <div class="bg-white rounded-lg py-3 px-4 admin m-1">
+        <div class="w-100 d-flex justify-end position-relative">
+          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item edit" href="#">Edit</a>
+            <a class="dropdown-item delete" href="#">Delete</a>
+          </div>
+        </div>
         <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
         <div class="text-center">
           <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
@@ -52,6 +67,14 @@
         </div>
       </div>
       <div class="bg-white rounded-lg py-3 px-4 admin m-1">
+        <div class="w-100 d-flex justify-end position-relative">
+          <i class="fas fa-ellipsis-h cursor-pointer" id="dropdownMenuButton" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false"></i>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item edit" href="#">Edit</a>
+            <a class="dropdown-item delete" href="#">Delete</a>
+          </div>
+        </div>
         <img class="h-24 w-24 rounded-full mx-auto my-2" src="/img/default-user.svg">
         <div class="text-center">
           <div class="font-bold text-base mb-2 title w-100">Mahmoud Mustafa</div>
